@@ -1,30 +1,26 @@
 *** Keywords ***
 Open Ondemand website
-	Open Browser 							${url_ondemand_staging}					firefox
+	Open Browser 							${url_ondemand_staging}					${browser}
 	Maximize Browser Window
 
 Login to Ondemand 			[Arguments]			${username}			${password}
-	Click Element			css=.login-menu
-	Element Should Be Visible				css=#loginTab
-	Input Text								css=#i_email			${username}
-	Input Password 							css=#i_pw			${password}
-	Click Button							css=#b_login
-	Wait Until Element Is Visible			css=#s_usernamedirective		10s
-	Element Should Contain					css=#s_usernamedirective		${username}
+	Click Element			${Login_menu}
+	Element Should Be Visible				${Login_modal}
+	Input Text								${email_field}			${username}
+	Input Password 							${pswd_password}			${password}
+	Click Button							${login_btn}
+
+Check login successful
+	Wait Until Element Is Visible			${username_topmenu}		10s
+	Element Should Contain					${username_topmenu}		${username}
 
 Logout from Ondemand
-	Wait Until Element Is Visible			css=#s_usernamedirective		10s
-	Execute Javascript						$('#s_usernamedirective').click()
-	Execute Javascript						$('#a_logoutdirective').click()
+	Wait Until Element Is Visible			${username_topmenu}		10s
+	Execute Javascript						$('#${username_topmenu_jquery}').click()
+	Execute Javascript						$('#${logout_jquery}').click()
 	Sleep  3s
-	Element Should Not Be Visible 			css=#s_usernamedirective
+	Element Should Not Be Visible 			${username_topmenu}
 
-Change password				[Arguments]			${newpswd}			${confirmpswd}
-	Execute Javascript						$('#s_usernamedirective').click()
-	Execute Javascript						$('#a_settingsdirective').click()
-	Sleep  1s
-	Input Text 							css=input[name='pw1']			${newpswd}
-	Input Text 							css=input[name='pwc']			${confirmpswd}
-	Sleep  1s
-	Click Element						css=input[name='iphone']
-	Execute Javascript							$('#b_reg').click()
+Error message should be 				[Arguments]			${element}			${error_message}
+	${message} = 			Get Text			${element}
+	Should Be Equal			${message}			${error_message}
