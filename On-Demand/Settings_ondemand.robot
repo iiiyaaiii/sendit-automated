@@ -41,9 +41,8 @@ Change password and login successful
 Change password fail input wrong confirm password
 	Open Ondemand website
 	Login to Ondemand			${username}		${password}
-	Click Settings menu
-	Wait Until Element Is Visible		${user_form}		5s
+	Sleep  1s
 	Change password				${newpassword}		${password}
-	Sleep  2s
+	Sleep  3s
 	Error message should be 	css=p[ng-message="compareto"]		Passwords must be the same
 
