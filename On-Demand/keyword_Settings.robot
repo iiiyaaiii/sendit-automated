@@ -10,7 +10,3 @@ Change password				[Arguments]			${newpswd}			${confirmpswd}
 	Wait Until ELement Is Visible		${change_pswd}			10s
 	Input Text 							${change_pswd}			${newpswd}
 	Input Text 							${confirm_change_pswd}			${confirmpswd}
-	# Sleep  3s
-	# Click Element						${setting_email}
-	# Execute Javascript							$('#${submit_jquery}').click()
-

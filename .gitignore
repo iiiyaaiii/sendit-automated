@@ -8,3 +8,5 @@ On-Demand/output\.xml
 On-Demand/report\.html
 
 *.png
+
+*.log
