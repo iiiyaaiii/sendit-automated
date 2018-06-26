@@ -3,6 +3,10 @@ ${browser}						firefox
 ${url_ondemand_staging}			https://staging-customer.sendit.asia/
 ${username}						Tester1@sendit.asia
 ${password}						12345678
+${defaultuser_name}				Panuwit S.
+${defaultuser_email}			tester1@sendit.asia
+${defaultuser_phone}			022020022
+${defaultuser_address}			Bangkok
 ${user_form}					css=form[name="userForm"]
 ${newpassword}					new12345
 ${settinguser_name}				Ms.Pitchaya
@@ -27,3 +31,4 @@ ${setting_name}					css=input[name="iname"]
 ${setting_email}				css=input[name="iemail"]
 ${setting_phone}				css=input[name="iphone"]
 ${setting_address}				css=input[name="address"]
+${setting_language}				//*[@id="individual"]/div[1]/select
