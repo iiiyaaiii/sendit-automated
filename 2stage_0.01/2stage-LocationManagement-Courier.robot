@@ -58,7 +58,7 @@ ${css_CreateSAVEbtn}						//div/div/div[3]/div/div[3]/div/button[1]
 ${css_CreateCANCLEbtn}						//div/div/div[3]/div/div[3]/div/button[2]
 
 
-${css_SelecetCourierForEdit}                //div/div/div[3]/div/div[2]/div/ul/li[6]/span[2]        #KerryExpress
+${css_SelecetCourierForEdit}                //*[contains(text(),'Line MAN')]
 ${css_Editbtn}                              //div/div/div[3]/div/div[3]/div/button
 ${css_EditDisable_Enablebtn}                //div/div/div[3]/div/div[3]/div/div[7]/div[2]
 
