@@ -84,18 +84,18 @@ select WAREHOUSE
 
 
 Create
-	Wait Until Element Is Visible 			${css_CreateNewbtn}		5s
-	Click element    						${css_CreateNewbtn}
+	Wait Until Element Is Visible 			${css_CreateNewbtn}				5s
+	Click element    										${css_CreateNewbtn}
 
 Create Input Data
 	#WAREHOUSEName
-	Wait Until Element Is Visible 			${css_inputWAREHOUSEName}		5s
-	Click element    						${css_inputWAREHOUSEName}
-	Input Text 								${css_inputWAREHOUSEName}			${WAREHOUSEName}
+	Wait Until Element Is Visible 			${css_inputWAREHOUSEName}					5s
+	Click element    										${css_inputWAREHOUSEName}
+	Input Text 													${css_inputWAREHOUSEName}					${WAREHOUSEName}
 	#WAREHOUSEAddress
-	Wait Until Element Is Visible 			${css_inputWAREHOUSEAddress}		5s
-	Click element    						${css_inputWAREHOUSEAddress}
-	Input Text 								${css_inputWAREHOUSEAddress}			${WAREHOUSEAddress}
+	Wait Until Element Is Visible 			${css_inputWAREHOUSEAddress}			5s
+	Click element    										${css_inputWAREHOUSEAddress}
+	Input Text 													${css_inputWAREHOUSEAddress}			${WAREHOUSEAddress}
 
 
 
@@ -105,28 +105,28 @@ Create Input Data
 
 select WAREHOUSE for edit
 	Wait Until Element Is Visible 			${css_SelecetWAREHOUSEForEdit}		5s
-	Click Element							${css_SelecetWAREHOUSEForEdit}
+	Click Element												${css_SelecetWAREHOUSEForEdit}
 	Wait Until Element Is Visible 			${css_Editbtn}						5s
-	Click Element 							${css_Editbtn}
+	Click Element 											${css_Editbtn}
 
 
 Edit Input Data
 	#WAREHOUSEName
 	Wait Until Element Is Visible 			${css_inputWAREHOUSEName}		5s
-	Click element    						${css_inputWAREHOUSEName}
-	Input Text 								${css_inputWAREHOUSEName}			${WAREHOUSENameEdit}
+	Click element    										${css_inputWAREHOUSEName}
+	Input Text 													${css_inputWAREHOUSEName}			${WAREHOUSENameEdit}
 	#WAREHOUSEAddress
 	Wait Until Element Is Visible 			${css_inputWAREHOUSEAddress}		5s
-	Click element    						${css_inputWAREHOUSEAddress}
-	Input Text 								${css_inputWAREHOUSEAddress}			${WAREHOUSEAddressEdit}
+	Click element    										${css_inputWAREHOUSEAddress}
+	Input Text 													${css_inputWAREHOUSEAddress}			${WAREHOUSEAddressEdit}
 
 
 Edit disable
 	Wait Until Element Is Visible 			${css_EditDisable_Enablebtn}		5s
-	Click Element 							${css_EditDisable_Enablebtn}
+	Click Element 											${css_EditDisable_Enablebtn}
 Edit enable
 	Wait Until Element Is Visible 			${css_EditDisable_Enablebtn}		5s
-	Click Element 							${css_EditDisable_Enablebtn}
+	Click Element 											${css_EditDisable_Enablebtn}
 
 
 
@@ -134,10 +134,10 @@ Edit enable
 
 CANCLE btn
 	Wait Until Element Is Visible 			${css_CreateCANCLEbtn}		5s
-	Click element    						${css_CreateCANCLEbtn}
+	Click element    										${css_CreateCANCLEbtn}
 SAVE btn
 	Wait Until Element Is Visible 			${css_CreateSAVEbtn}		5s
-	Click element    						${css_CreateSAVEbtn}
+	Click element    										${css_CreateSAVEbtn}
 
 
 
@@ -145,27 +145,27 @@ SAVE btn
 
 Search Location Management
 	Wait Until Element Is Visible 			${css_WAREHOUSEbtn}		5s
-	Click element    						${css_WAREHOUSEbtn}
+	Click element    										${css_WAREHOUSEbtn}
 
 Search Location Management WAREHOUSE Status All
-	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
+	Wait Until Element Is Visible 			${css_Statusbtn}			5s
+	Click element    										${css_Statusbtn}
 	Wait Until Element Is Visible 			${css_StatusAllbtn}		5s
-	Click element    						${css_StatusAllbtn}
+	Click element    										${css_StatusAllbtn}
 	Wait Until Element Is Visible 			${css_inputSearch}		5s
-	Click element    						${css_inputSearch}
+	Click element    										${css_inputSearch}
 
 Search Location Management WAREHOUSE Status Active
-	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
+	Wait Until Element Is Visible 			${css_Statusbtn}					5s
+	Click element    										${css_Statusbtn}
 	Wait Until Element Is Visible 			${css_StatusActivebtn}		5s
-	Click element    						${css_StatusActivebtn}
+	Click element    										${css_StatusActivebtn}
 
 Search Location Management WAREHOUSE Status Inactive
-	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
+	Wait Until Element Is Visible 			${css_Statusbtn}						5s
+	Click element    										${css_Statusbtn}
 	Wait Until Element Is Visible 			${css_Statusinactivebtn}		5s
-	Click element    						${css_Statusinactivebtn}
+	Click element    										${css_Statusinactivebtn}
 
 
 
@@ -232,15 +232,15 @@ Search Location Management WAREHOUSE Status Inactive
 # 	Edit Input Data
 # 	SAVE btn
 
-2Stage website Edit DISABLE btn
+2Stage website Edit CANCLE
 	Login to 2Stage by						${admin_username}				${admin_password}
 	Go to Location Management page
 	select WAREHOUSE
 	select WAREHOUSE for edit
 	Edit disable
-	SAVE btn
+	CANCLE btn
 
-2Stage website Edit ENABLE btn
+2Stage website Edit SAVE
 	Login to 2Stage by						${admin_username}				${admin_password}
 	Go to Location Management page
 	select WAREHOUSE
