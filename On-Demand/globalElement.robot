@@ -35,3 +35,20 @@ ${setting_language}				  //*[@id="individual"]/div[1]/select
 
 #Pickup
 ${pickup_tab}               //*[@id="panel-heading-style"]/h4/a/div/span[2]
+${pickup_location_input}    css=input[placeholder="Pickup Location - Type to search"]
+${pickup_time_input}        css=input[placeholder="Pickup time"]
+${pickup_time_modal}        css=md-dialog-content.dtp-content
+${pickup_google_item}       li.icn-google
+${nextmonth}                css=div.dtp-month-btn-next
+${selected_date}            css=.dtp-select-day.selected
+${clock}                    css=.dtp-picker-clock
+${hr_11}                    css=#time-hours-11
+${min_30}                   css=#time-minutes-30
+${submit_datetime}          css=.dtp-btn-ok
+${submit_pickup}            //*[@id="content1"]/div/div/div/div/div/button
+${sender_name}              css=#senderContactName
+${sender_phone}             css=#senderPhoneNumber
+${sender_email}             css=#senderEmail
+${sender_comment}           css=textarea[placeholder="Comments(floor, building - Optional)"]
+${dropoff_modal}            css=div.dropoffContainer
+${parcel_modal}             css=div.parcelContainer
