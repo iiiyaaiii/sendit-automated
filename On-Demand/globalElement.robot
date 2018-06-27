@@ -42,8 +42,8 @@ ${pickup_google_item}       li.icn-google
 ${nextmonth}                css=div.dtp-month-btn-next
 ${selected_date}            css=.dtp-select-day.selected
 ${clock}                    css=.dtp-picker-clock
-${hr_11}                    css=#time-hours-11
-${min_30}                   css=#time-minutes-30
+${hr}                       css=#time-hours
+${min}                      css=#time-minutes
 ${submit_datetime}          css=.dtp-btn-ok
 ${submit_pickup}            //*[@id="content1"]/div/div/div/div/div/button
 ${sender_name}              css=#senderContactName
