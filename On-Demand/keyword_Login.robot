@@ -6,6 +6,7 @@ Open Ondemand website
 Login to Ondemand 			[Arguments]			${username}			${password}
 	Wait Until Element Is Visible			${Login_menu}			10s
 	Click Element			${Login_menu}
+	Sleep  2s
 	Element Should Be Visible				${Login_modal}
 	Input Text								${email_field}			${username}
 	Input Password 							${pswd_password}			${password}
@@ -23,5 +24,6 @@ Logout from Ondemand
 	Element Should Not Be Visible 			${username_topmenu}
 
 Error message should be 				[Arguments]			${element}			${error_message}
+	Wait Until Element Is Visible				${element}				10s
 	${message} = 			Get Text			${element}
 	Should Be Equal			${message}			${error_message}

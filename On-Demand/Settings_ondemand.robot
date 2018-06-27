@@ -52,7 +52,8 @@ Change password fail input wrong confirm password
 	Login to Ondemand				${username}				${password}
 	Sleep  5s
 	Change password					${newpassword}		${password}
-	Sleep  10s
+	Sleep  5s
+	Click Element    				${setting_phone}
 	Error message should be 	css=p[ng-message="compareto"]		Passwords must be the same
 
 Change language

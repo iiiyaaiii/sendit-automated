@@ -15,5 +15,6 @@ Access to Ondemand web and login successful
 
 Access to Ondemand web and login fail wrong password
 	Open Ondemand website
+	Sleep  1s
 	Login to Ondemand			${username}		12355665
 	Error message should be 					${error_alertmsg}		Incorrect username or password.
