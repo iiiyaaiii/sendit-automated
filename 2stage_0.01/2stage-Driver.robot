@@ -165,6 +165,7 @@ New Driver
 	Wait Until Element Is Visible 			    ${css_COURIER}		   		5s
 	Click element														${css_COURIER}
 
+
 Edit Driver
 		Wait Until Element Is Visible 			    ${css_editDriverbtn}	  		5s
 		Click element   											  ${css_editDriverbtn}
@@ -218,13 +219,16 @@ Edit Driver
 		Wait Until Element Is Visible 			    ${css_COURIER}		   		5s
 		Click element														${css_COURIER}
 
+
 New Driver CANCLE btn
 		Wait Until Element Is Visible 			 	${css_Canclebtn} 	   		5s
 		Click element													${css_Canclebtn}
 
+
 New Driver Create btn
 		Wait Until Element Is Visible 			  ${css_Createbtn} 	   		5s
 		Click element													${css_Createbtn}
+
 
 Reset password
 		Wait Until Element Is Visible 			 		${css_resetDriverbtn} 	   		5s
@@ -236,13 +240,16 @@ Reset password
 		Click element														${css_ResetpasswordViewbtn}
 		Sleep    10s
 
+
 Reset password CANCLE btn
 		Wait Until Element Is Visible 			 		${css_ResetpasswordCanclebtn} 		   		5s
 		Click element														${css_ResetpasswordCanclebtn}
 
+
 Reset password Change btn
 		Wait Until Element Is Visible 			 		${css_ResetpasswordChangebtn}			   		5s
 		Click element														${css_ResetpasswordChangebtn}
+
 
 Delete Driver
 		Wait Until Element Is Visible 			 		${css_DeleteDriverbtn}			   		5s
@@ -250,8 +257,10 @@ Delete Driver
 		Sleep    3s
 		#Handle Alert									DISMISS			5s
 
+
 Delete Driver CANCLE btn
 		Handle Alert									DISMISS			5s
+
 
 Delete Driver ACCEPT btn
 		Handle Alert									ACCEPT			5s
