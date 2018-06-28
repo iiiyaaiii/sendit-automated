@@ -52,3 +52,28 @@ ${sender_email}             css=#senderEmail
 ${sender_comment}           css=textarea[placeholder="Comments(floor, building - Optional)"]
 ${dropoff_modal}            css=div.dropoffContainer
 ${parcel_modal}             css=div.parcelContainer
+
+#Dropoff
+${dropoff1_location}        css=input[placeholder="Dropoff1 Location"]
+${dropoff_address}          Richmond Office Building
+${contact_person}           css=.dropoffContainer input[placeholder="Contact Person / Company"]
+${contact_name}             สมชาย  ขายดี
+${phone_number}             css=.dropoffContainer input[placeholder="Phone number"]
+${contact_phone}            0925554545
+${dropoff_comment}          css=#textinputDropoffComment
+${contact_comment}          Level 12
+# ${parcel_Cash}              css=li[ng-click="vm.showCashModal($index)"]
+${parcel_Cash}              css=.parcelContainer li[tooltip="Cash on delivery"]
+${parcel_Food}              css=.parcelContainer li[tooltip="Hot food delivery"]
+${parcel_ID}                css=.parcelContainer li[tooltip="Photo ID approval"]
+${parcel_Return}            css=.parcelContainer li[tooltip="Return route"]
+${parcel_Document}          css=.parcelContainer li[tooltip="Document processing"]
+${parcel_Purchase}          css=.parcelContainer li[tooltip="Purchase services"]
+${parcel_Mailing}           css=.parcelContainer li[tooltip="Mailing services"]
+${parcel_Insurance}         css=.parcelContainer li[tooltip="Extra Insurance"]
+${COD_input}                css=input[placeholder="THB"]
+${done_btn}                 css=a.done
+${parcel_cash_value}        css=.green .service-value
+${pacel_insurance_value}    css=.blue .service-value
+${complete_parcel_next_btn}          css=button[ng-click="vm.doPriceAndConfirm()"]
+${confirmation_modal}       css=#content3
