@@ -55,22 +55,26 @@ ${parcel_modal}             css=div.parcelContainer
 
 #Dropoff
 ${dropoff1_location}        css=input[placeholder="Dropoff1 Location"]
-${dropoff_address}          Richmond Office Building
+${dropoff2_location}        css=input[placeholder="Dropoff2 Location"]
+${dropoff3_location}        css=input[placeholder="Dropoff3 Location"]
+${dropoff4_location}        css=input[placeholder="Dropoff4 Location"]
+${dropoff5_location}        css=input[placeholder="Dropoff5 Location"]
+${dropoff1_address}          Richmond Office Building
+${dropoff2_address}          AIA
 ${contact_person}           css=.dropoffContainer input[placeholder="Contact Person / Company"]
 ${contact_name}             สมชาย  ขายดี
 ${phone_number}             css=.dropoffContainer input[placeholder="Phone number"]
 ${contact_phone}            0925554545
 ${dropoff_comment}          css=#textinputDropoffComment
 ${contact_comment}          Level 12
-# ${parcel_Cash}              css=li[ng-click="vm.showCashModal($index)"]
-${parcel_Cash}              css=.parcelContainer li[tooltip="Cash on delivery"]
-${parcel_Food}              css=.parcelContainer li[tooltip="Hot food delivery"]
-${parcel_ID}                css=.parcelContainer li[tooltip="Photo ID approval"]
-${parcel_Return}            css=.parcelContainer li[tooltip="Return route"]
-${parcel_Document}          css=.parcelContainer li[tooltip="Document processing"]
-${parcel_Purchase}          css=.parcelContainer li[tooltip="Purchase services"]
-${parcel_Mailing}           css=.parcelContainer li[tooltip="Mailing services"]
-${parcel_Insurance}         css=.parcelContainer li[tooltip="Extra Insurance"]
+${parcel_Cash}              .parcelContainer li[tooltip="Cash on delivery"]
+${parcel_Food}              .parcelContainer li[tooltip="Hot food delivery"]
+${parcel_ID}                .parcelContainer li[tooltip="Photo ID approval"]
+${parcel_Return}            .parcelContainer li[tooltip="Return route"]
+${parcel_Document}          .parcelContainer li[tooltip="Document processing"]
+${parcel_Purchase}          .parcelContainer li[tooltip="Purchase services"]
+${parcel_Mailing}           .parcelContainer li[tooltip="Mailing services"]
+${parcel_Insurance}         .parcelContainer li[tooltip="Extra Insurance"]
 ${COD_input}                css=input[placeholder="THB"]
 ${done_btn}                 css=a.done
 ${parcel_cash_value}        css=.green .service-value

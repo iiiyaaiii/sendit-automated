@@ -18,7 +18,7 @@ Select Parcel       [Arguments]     ${parcel_type}
   ...                         ELSE IF             '${parcel_type}' == 'INSURANCE'
   ...                         Set Variable        ${parcel_Insurance}
   Sleep  10s
-  Click Element               ${css_parcel_type}
+  Execute Javascript    	    $('${css_parcel_type}').click()
   Run Keyword If              '${parcel_type}' == 'CASH'          Input COD           1500
   ...    ELSE IF              '${parcel_type}' == 'INSURANCE'     Select Insurance    20000
 

@@ -4,7 +4,8 @@ Open Ondemand website
 	Maximize Browser Window
 
 Login to Ondemand 			[Arguments]			${username}			${password}
-	Wait Until Element Is Visible			${Login_menu}			10s
+	Wait Until Element Is Visible			${Login_menu}			30s
+	Sleep  10s
 	Click Element			${Login_menu}
 	Sleep  2s
 	Element Should Be Visible				${Login_modal}

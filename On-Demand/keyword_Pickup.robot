@@ -1,8 +1,8 @@
 *** Keywords ***
 
 Create Pickup location    [Arguments]     ${address}    ${hour}   ${minute}
-  Wait Until Element Is Visible     ${pickup_tab}     10s
-  Sleep  5s
+  Wait Until Element Is Visible     ${pickup_tab}     30s
+  Sleep  20s
   Input Text               ${pickup_location_input}       ${address}
   Click Element						${pickup_location_input}
   Sleep  10s
