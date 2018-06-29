@@ -23,17 +23,33 @@ ${css_Numberofitems} 					//div[4]/div/div/div/div/form/div/div[3]/input
 ${css_ChooseCustomerbtn}			//div[4]/div/div/div/div/div/button[2]/span
 ${css_CustomerSelect}					//div[4]/div/div/div/div/form/div[2]/div/div/span/span
 ${css_Customer}								//*[contains(text(),'7-11 to shop')]
-${css_ShopSelect}						//div[4]/div/div/div/div/form/div[3]/div/div/span
-${css_Shop}										//*[contains(text(),'โรงอาหารกลาง มธ.')]
+#${css_Customer}								//*[contains(text(),'Lazada')]
+${css_ShopSelect}							//div[4]/div/div/div/div/form/div[3]/div/div/div[1]
+#${css_Shop}										//*[contains(text(),'โรงอาหารกลาง มธ.')]
+#${css_Shop}										//*[contains(text(),'MIDTOWN (อโศก)')]
+#${css_Shop}										//*[contains(text(),'ม.นักกีฬา จุด 4')]
+#${css_Shop}										//*[contains(text(),'Eve and Boy')]
+${css_Shop}										//*[contains(text(),'กิ่งแก้ว 43')]
 ${css_CustomerNumberofitems}						//div[4]/div/div/div/div/form/div[4]/input
 ${css_CreateNewRequestbtn}							//div[4]/div/div/div/div/form/div[5]/button/span
 
 #Data
-${ShopCode}										123453335
+${ShopCode}										67334
 ${Numberofitems} 							7
 ${CustomerNumberofitems}			7
 
+#fillter
+${css_CustomerSelectfiltersbtn}							//div[1]/div[2]/div/div/span/span
+${css_ShopSelectfiltersbtn}									//div[1]/div[3]/div/div/span/span
+${css_Body}						//div[1]
+${css_SHOW_ONLY_UNASSIGNED_JOBS_BTN}				//div[1]/div[4]/div[1]/div/div[2]
 
+#Action
+${css_ActionCanclebtn}									//div[2]/div[1]/div[3]/div[1]/div/div/div[2]/div/div[13]/div/div/div/div/button[1]
+${css_ActionAssingbtn}									//div[2]/div[1]/div[3]/div[1]/div/div/div[2]/div/div[13]/div/div/div/div/button[2]/i
+${css_ActionAssinginputname}									//form/div/input
+${css_nameDriver}												kijja
+${css_ActionAssingDriverbtn}						//table/tbody/tr[1]/td[5]/button
 
 
 *** Keywords ***
@@ -78,9 +94,54 @@ New Request
 	Click element  													${css_CreateNewRequestbtn}
 	Confirm Action
 
+fillter
+	Wait Until Element Is Visible 			    ${css_CustomerSelectfiltersbtn}	    		5s
+	Click element  													${css_CustomerSelectfiltersbtn}
+	Wait Until Element Is Visible 			    ${css_Customer}		    		5s
+	Click element  													${css_Customer}
+	Wait Until Element Is Visible 			    ${css_Body}	    		5s
+	Click element  													${css_Body}
+	Wait Until Element Is Visible 			    ${css_ShopSelectfiltersbtn}	    		5s
+	Click element  													${css_ShopSelectfiltersbtn}
+	Wait Until Element Is Visible 			    ${css_Shop}		    		5s
+	Click element  													${css_Shop}
+	Wait Until Element Is Visible 			    ${css_Body}	    		5s
+	Click element  													${css_Body}
+	Wait Until Element Is Visible 			    ${css_SHOW_ONLY_UNASSIGNED_JOBS_BTN}		    		5s
+	Click element  													${css_SHOW_ONLY_UNASSIGNED_JOBS_BTN}
+
+Action cancle
+	Wait Until Element Is Visible 			    ${css_ActionCanclebtn}	    		5s
+	Click element  													${css_ActionCanclebtn}
+	Confirm Action
+
+
+Action Assing
+			Wait Until Element Is Visible 			    ${css_ActionAssingbtn}	    		5s
+			Click element  													${css_ActionAssingbtn}
+			Wait Until Element Is Visible 			    ${css_ActionAssinginputname}		    		5s
+			Click element  													${css_ActionAssinginputname}
+			Input Text    ${css_ActionAssinginputname}	    ${css_nameDriver}
+			Wait Until Element Is Visible 			    ${css_ActionAssingDriverbtn}	    		5s
+			Click element  													${css_ActionAssingDriverbtn}
+			Confirm Action
+
 
 *** Test Cases ***
 # 2Stage website Pickups New Request
 #       Login to 2Stage by						${admin_username}				${admin_password}
 #       Go to Pickups page
 # 			New Request
+
+# 2Stage website Pickups fillter
+# 			Login to 2Stage by						${admin_username}				${admin_password}
+# 			Go to Pickups page
+# 			fillter
+
+
+2Stage website Pickups Action Assing
+						Login to 2Stage by						${admin_username}				${admin_password}
+						Go to Pickups page
+						#fillter
+						# Action Assing
+						Action cancle
