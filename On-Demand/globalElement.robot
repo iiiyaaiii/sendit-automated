@@ -42,7 +42,8 @@ ${pickup_google_item}       li.icn-google
 ${nextmonth}                css=div.dtp-month-btn-next
 ${selected_date}            css=.dtp-select-day.selected
 ${clock}                    css=.dtp-picker-clock
-${hr}                       css=#time-hours
+${hr_beforenoon}            css=#time-hours
+${hr_afternoon}             css=#time-24hours
 ${min}                      css=#time-minutes
 ${submit_datetime}          css=.dtp-btn-ok
 ${submit_pickup}            //*[@id="content1"]/div/div/div/div/div/button
@@ -59,14 +60,23 @@ ${dropoff2_location}        css=input[placeholder="Dropoff2 Location"]
 ${dropoff3_location}        css=input[placeholder="Dropoff3 Location"]
 ${dropoff4_location}        css=input[placeholder="Dropoff4 Location"]
 ${dropoff5_location}        css=input[placeholder="Dropoff5 Location"]
-${dropoff1_address}          Richmond Office Building
-${dropoff2_address}          AIA
-${contact_person}           css=.dropoffContainer input[placeholder="Contact Person / Company"]
-${contact_name}             สมชาย  ขายดี
-${phone_number}             css=.dropoffContainer input[placeholder="Phone number"]
-${contact_phone}            0925554545
-${dropoff_comment}          css=#textinputDropoffComment
-${contact_comment}          Level 12
+${dropoff1_address}         Richmond Office Building
+${dropoff2_address}         AIA
+${dropoff3_address}         Interchange Tower
+${contact_person1}          css=.dropoffContainer input[placeholder="Contact Person / Company"]
+${contact_name1}            สมชาย  ขายดี
+${phone_number1}            css=.dropoffContainer input[placeholder="Phone number"]
+${contact_phone1}           0925554545
+${dropoff_comment1}         css=#textinputDropoffComment
+${contact_comment1}          Level 12
+${contact_person2}          $('.dropoffContainer input[placeholder="Contact Person / Company"]')[1]
+${contact_name2}            สมใจ  ขายดี
+${phone_number2}            $('.dropoffContainer input[placeholder="Phone number"]')[1]
+${contact_phone2}           0926667676
+${contact_person3}          $('.dropoffContainer input[placeholder="Contact Person / Company"]')[2]
+${contact_name3}            สุชใจ  ขายดี
+${phone_number3}            $('.dropoffContainer input[placeholder="Phone number"]')[2]
+${contact_phone3}           0928989988
 ${parcel_Cash}              .parcelContainer li[tooltip="Cash on delivery"]
 ${parcel_Food}              .parcelContainer li[tooltip="Hot food delivery"]
 ${parcel_ID}                .parcelContainer li[tooltip="Photo ID approval"]
@@ -81,3 +91,5 @@ ${parcel_cash_value}        css=.green .service-value
 ${pacel_insurance_value}    css=.blue .service-value
 ${complete_parcel_next_btn}          css=button[ng-click="vm.doPriceAndConfirm()"]
 ${confirmation_modal}       css=#content3
+${add_more_dropoff}         css=li#addNewDropoff
+${delete_dropoff}           $('.del-dropoff-parcel a.ng-binding')[0]

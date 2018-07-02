@@ -11,7 +11,7 @@ Resource			keyword_Pickup.robot
 Create Pickup successful
 	Open Ondemand website
 	Login to Ondemand			   ${username}				${password}
-  Create Pickup location					${user_address}			${hr}-11		${min}-30
+  Create Pickup location					${user_address}			${hr_beforenoon}-11		${min}-45
 	Sleep  5s
 	Element Should Be Visible				${dropoff_modal}
 	Element Should Be Visible       ${parcel_modal}
