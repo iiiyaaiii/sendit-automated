@@ -99,6 +99,7 @@ Login to 2Stage by		    [Arguments]			${username}					${password}
 	Click element  							            ${css_loginbtn}
 	Sleep  1s
 Go to Driver page
+	# Execute JavaScript    									$('${css_Driverbtn}').click()
 	Wait Until Element Is Visible 			    ${css_Driverbtn}		5s
 	Click element    						            ${css_Driverbtn}
 Search Driver
@@ -269,18 +270,18 @@ Delete Driver ACCEPT btn
 
 
 *** Test Cases ***
-# 2Stage website Search Driver
-#   Login to 2Stage by						${admin_username}				${admin_password}
-#   Go to Driver page
-# 	Search Driver
+2Stage website Search Driver
+  Login to 2Stage by						${admin_username}				${admin_password}
+  Go to Driver page
+	Search Driver
 
 # 2Stage website New Driver
 # 	  Login to 2Stage by						${admin_username}				${admin_password}
 # 	  Go to Driver page
-		# New Driver
-		# New Driver CANCLE btn
-		# New Driver
-		# New Driver Create btn
+# 		New Driver
+# 		New Driver CANCLE btn
+# 		New Driver
+# 		New Driver Create btn
 
 # 2Stage website Edit Driver
 # 		Login to 2Stage by						${admin_username}				${admin_password}
@@ -306,9 +307,9 @@ Delete Driver ACCEPT btn
 # 				Reset password Change btn
 
 
-2Stage website reset Password
-				Login to 2Stage by						${admin_username}				${admin_password}
-				Go to Driver page
-				Search Driver
-				Delete Driver
-				Delete Driver ACCEPT btn
+# 2Stage website reset Password
+# 				Login to 2Stage by						${admin_username}				${admin_password}
+# 				Go to Driver page
+# 				Search Driver
+# 				Delete Driver
+# 				Delete Driver ACCEPT btn
