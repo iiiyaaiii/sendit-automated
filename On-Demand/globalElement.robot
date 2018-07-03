@@ -37,6 +37,7 @@ ${setting_language}				  //*[@id="individual"]/div[1]/select
 ${pickup_tab}               //*[@id="panel-heading-style"]/h4/a/div/span[2]
 ${pickup_location_input}    css=input[placeholder="Pickup Location - Type to search"]
 ${pickup_time_input}        css=input[placeholder="Pickup time"]
+${pickup_now}               css=span[ng-click="vm.setPickUpNow()"]
 ${pickup_time_modal}        css=md-dialog-content.dtp-content
 ${pickup_google_item}       li.icn-google
 ${nextmonth}                css=div.dtp-month-btn-next
@@ -63,20 +64,29 @@ ${dropoff5_location}        css=input[placeholder="Dropoff5 Location"]
 ${dropoff1_address}         Richmond Office Building
 ${dropoff2_address}         AIA
 ${dropoff3_address}         Interchange Tower
+${dropoff4_address}         FYI Center
+${dropoff5_address}         CP Tower
 ${contact_person1}          css=.dropoffContainer input[placeholder="Contact Person / Company"]
 ${contact_name1}            สมชาย  ขายดี
 ${phone_number1}            css=.dropoffContainer input[placeholder="Phone number"]
 ${contact_phone1}           0925554545
 ${dropoff_comment1}         css=#textinputDropoffComment
-${contact_comment1}          Level 12
-${contact_person2}          $('.dropoffContainer input[placeholder="Contact Person / Company"]')[1]
+${contact_comment1}         Level 12
+${contact_person_element}   $('.dropoffContainer input[placeholder="Contact Person / Company"]')
+${phone_number_element}     $('.dropoffContainer input[placeholder="Phone number"]')
 ${contact_name2}            สมใจ  ขายดี
-${phone_number2}            $('.dropoffContainer input[placeholder="Phone number"]')[1]
 ${contact_phone2}           0926667676
-${contact_person3}          $('.dropoffContainer input[placeholder="Contact Person / Company"]')[2]
-${contact_name3}            สุชใจ  ขายดี
-${phone_number3}            $('.dropoffContainer input[placeholder="Phone number"]')[2]
+${contact_name3}            สุขใจ  ขายดี
 ${contact_phone3}           0928989988
+${contact_name4}            อยู่สบาย  ขายดี
+${contact_phone4}           0981239898
+${contact_name5}            สมชาย  ขายดี
+${contact_phone5}           0988689958
+${confirmation_modal}       css=#content3
+${add_more_dropoff}         css=li#addNewDropoff
+${delete_dropoff}           $('.del-dropoff-parcel a.ng-binding')[0]
+
+#Parcel
 ${parcel_Cash}              .parcelContainer li[tooltip="Cash on delivery"]
 ${parcel_Food}              .parcelContainer li[tooltip="Hot food delivery"]
 ${parcel_ID}                .parcelContainer li[tooltip="Photo ID approval"]
@@ -90,6 +100,3 @@ ${done_btn}                 css=a.done
 ${parcel_cash_value}        css=.green .service-value
 ${pacel_insurance_value}    css=.blue .service-value
 ${complete_parcel_next_btn}          css=button[ng-click="vm.doPriceAndConfirm()"]
-${confirmation_modal}       css=#content3
-${add_more_dropoff}         css=li#addNewDropoff
-${delete_dropoff}           $('.del-dropoff-parcel a.ng-binding')[0]
