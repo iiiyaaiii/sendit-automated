@@ -63,10 +63,34 @@ ${css_edit1Savebtn}									//div/div/div[3]/div/div[5]/div/div[2]/div[2]/div[2]
 
 ${css_editSenderbtn}						//div/div/div[3]/div/div[5]/div/div[2]/table[1]/tbody/tr[1]/td/i
 
-${css_editSenderAddress}				//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/textarea
+${css_editSenderAddress}					//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/textarea
+${editSenderAddress}							10/0095 Soi Sukhumvit 13 (Sang Chan), Khlong Toei Nuea, Watthana, Bangkok 10110, Bangkok
+${css_editSenderNote}							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[2]/textarea
+${editSenderNote}									Test
+# ${css_editSenderCity}							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[2]/div[1]/div/div/div[1]
+# ${editSenderCity}									อ่างทอง
+${css_editSenderSavebtn} 							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[1]
+${css_editSenderCanclebtn} 						//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[2]
 
 
-${editSenderAddress}				10/0095 Soi Sukhumvit 13 (Sang Chan), Khlong Toei Nuea, Watthana, Bangkok 10110, Bangkok
+
+
+
+
+${css_editRECIPIENTbtn}						//div/div/div[3]/div/div[5]/div/div[2]/table[2]/tbody/tr[1]/td/i
+
+${css_editRECIPIENTAddress}					//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/textarea
+${editRECIPIENTAddress}							10/0095 Soi Sukhumvit 13 (Sang Chan), Khlong Toei Nuea, Watthana, Bangkok 10110, Bangkok
+${css_editRECIPIENTNote}							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[2]/textarea
+${editRECIPIENTNote}									Test
+${css_editRECIPIENTSavebtn} 							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[1]
+${css_editRECIPIENTCanclebtn} 						//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[2]
+
+
+
+
+
+
 
 
 
@@ -177,6 +201,7 @@ Customize columns
 View click link
 		Wait Until Element Is Visible 			    ${css_Viewclicklinkbtn}		  		5s
 		Click element  													${css_Viewclicklinkbtn}
+		Sleep    5s
 
 Edit
 		Wait Until Element Is Visible 			    ${css_editbtn}		  		5s
@@ -201,9 +226,38 @@ Edit 1
 Edit SENDER
 		Wait Until Element Is Visible 			    ${css_editSenderbtn}			  		5s
 		Click element  													${css_editSenderbtn}
+		Sleep    5s
 		Wait Until Element Is Visible 			    ${css_editSenderAddress}		  		5s
 		Click element  													${css_editSenderAddress}
 		Input Text    													${css_editSenderAddress}				${editSenderAddress}
+		Wait Until Element Is Visible 			    ${css_editSenderNote}			  		5s
+		Click element  													${css_editSenderNote}
+		Input Text  														${css_editSenderNote}			    ${editSenderNote}
+		# Wait Until Element Is Visible 			    ${css_editSenderCity}			  		5s
+		# Click element  													${css_editSenderCity}
+		# Input Text    													${css_editSenderCity}			    ${editSenderCity}
+		Wait Until Element Is Visible 			    ${css_editSenderSavebtn}			  		5s
+		Click element  													${css_editSenderSavebtn}
+
+
+		Sleep    5s
+
+
+		Wait Until Element Is Visible 			    ${css_editSenderbtn}			  		5s
+		Click element  													${css_editSenderbtn}
+		Sleep    5s
+		Wait Until Element Is Visible 			    ${css_editSenderAddress}		  		5s
+		Click element  													${css_editSenderAddress}
+		Input Text    													${css_editSenderAddress}				${editSenderAddress}
+		Wait Until Element Is Visible 			    ${css_editSenderNote}			  		5s
+		Click element  													${css_editSenderNote}
+		Input Text  														${css_editSenderNote}			    ${editSenderNote}
+		# Wait Until Element Is Visible 			    ${css_editSenderCity}			  		5s
+		# Click element  													${css_editSenderCity}
+		# Input Text    													${css_editSenderCity}			    ${editSenderCity}
+
+		Wait Until Element Is Visible 			    ${css_editSenderCanclebtn}			  		5s
+		Click element  													${css_editSenderCanclebtn}
 
 Edit RECIPIENT
 
