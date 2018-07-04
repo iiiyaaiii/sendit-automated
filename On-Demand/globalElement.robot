@@ -101,3 +101,5 @@ ${done_btn}                 css=a.done
 ${parcel_cash_value}        css=.green .service-value
 ${pacel_insurance_value}    css=.blue .service-value
 ${complete_parcel_next_btn}          css=button[ng-click="vm.doPriceAndConfirm()"]
+${add_more_parcel}          css=.parcelContainer #addNewDropoff
+${delete_parcel}            $('.del-dropoff-parcel a.ng-binding')[1]
