@@ -19,11 +19,19 @@ ${css_ParcelImportbtn}         //div/div/div[2]/ul/li[13]/a/i
 #Browse Customer
 ${css_BrowseCustomer}					//div/div/div[3]/div/div[2]/input
 ${BrowseCustomer}							ADEN
+${BrowseCustomer2}							ADEN
+${Customerbtn}								//div/div/div[3]/div/div[2]/ul/li
+${ChooseFilebtn}							//div/div/div[3]/div/div[2]/div[1]/div[2]/div/div/input
+
+${Downloadanexamplefilebtn}							//div/div/div[3]/div/div[3]/div[1]/div[1]/a
+${viewallbtn}														//div/div/div[3]/div/div[3]/div[2]/div[1]/a
+${Downloadbtn}													//div/div/div[3]/div/div[1]/div/table/tbody[1]/tr[2]/td[4]/a[1]
+${Rollbackbtn}													//div/div/div[3]/div/div[1]/div/table/tbody[1]/tr[2]/td[4]/a[2]
 
 
 *** Keywords ***
 Login to 2Stage by		    [Arguments]			${username}					${password}
-	Open Browser							              ${url_login}					chrome
+	Open Browser							              ${url_login}					firefox
 	Maximize Browser Window
 	Element Should Be Visible				        ${css_login_modal}				5s
 	Input Text								              ${css_username}					${username}
@@ -38,10 +46,32 @@ Go to Parcel Import page
 Browse Customer
 	Wait Until Element Is Visible 			    ${css_BrowseCustomer}  		5s
 	Click element    						            ${css_BrowseCustomer}
-	Input Text    													${css_BrowseCustomer}				${BrowseCustomer}		
+	Input Text    													${css_BrowseCustomer}				${BrowseCustomer}
+	Wait Until Element Is Visible 			    ${Customerbtn}  		5s
+	Click element  													${Customerbtn}
+	Wait Until Element Is Visible    				css=input[type="file"]
+	#Click element  													css=input[type="file"]
+	Choose File    													css=input[type="file"]     C:\Users\MP1CCW3X\Downloads\test.txt
+Download an example file
+	Wait Until Element Is Visible 			    ${Downloadanexamplefilebtn}  		5s
+	Click element  													${Downloadanexamplefilebtn}
+view all
+	Wait Until Element Is Visible 			    ${viewallbtn}	  		5s
+	Click element  													${viewallbtn}
+Download
+	Wait Until Element Is Visible 			    ${Downloadbtn}	  		5s
+	Click element  													${Downloadbtn}
+Rollback
+	Wait Until Element Is Visible 			    ${Rollbackbtn}	  		5s
+	Click element  													${Rollbackbtn}
 
 
 *** Test Cases ***
 2Stage website Parcel Import
       Login to 2Stage by						${admin_username}				${admin_password}
       Go to Parcel Import page
+			#Browse Customer
+			Download an example file
+			view all
+			Download
+			Rollback
