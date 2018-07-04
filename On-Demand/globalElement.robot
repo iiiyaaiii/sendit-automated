@@ -45,13 +45,14 @@ ${selected_date}            css=.dtp-select-day.selected
 ${clock}                    css=.dtp-picker-clock
 ${hr_beforenoon}            css=#time-hours
 ${hr_afternoon}             css=#time-24hours
-${min}                      css=#time-minutes
+${minute}                     css=#time-minutes
 ${submit_datetime}          css=.dtp-btn-ok
 ${submit_pickup}            //*[@id="content1"]/div/div/div/div/div/button
 ${sender_name}              css=#senderContactName
 ${sender_phone}             css=#senderPhoneNumber
 ${sender_email}             css=#senderEmail
 ${sender_comment}           css=textarea[placeholder="Comments(floor, building - Optional)"]
+${user_pickup_comment}      18th floor
 ${dropoff_modal}            css=div.dropoffContainer
 ${parcel_modal}             css=div.parcelContainer
 

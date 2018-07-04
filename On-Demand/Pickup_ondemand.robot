@@ -13,20 +13,21 @@ Create Pickup successful
 	Open Ondemand website
 	Login to Ondemand			   ${username}				${password}
   Create Pickup location					${user_address}
-	Sleep  5s
+	Set pickup date next month
+  Set pickup time					17				50
+  Complete sender details
+  Click Element    				${submit_pickup}
+	Sleep  2s
 	Element Should Be Visible				${dropoff_modal}
 	Element Should Be Visible       ${parcel_modal}
 
 Create Pickup fail incomplete required fields
 	Open Ondemand website
 	Login to Ondemand			   ${username}				${password}
-	Wait Until Element Is Visible     ${pickup_tab}     10s
-	Sleep  10s
-	Input Text               ${pickup_location_input}       ${user_address}
-	Click Element						${pickup_location_input}
-	Sleep  10s
-	Execute Javascript    	$($('${pickup_google_item}')[0]).click()
-	Sleep  5s
+	Create Pickup location					${user_address}
+	Set pickup date next month
+	Set pickup time					17				50
+	Sleep  3s
 	Clear Element Text   		${sender_name}
 	Clear Element Text			${sender_phone}
 	Element Should Be Disabled    					${submit_pickup}
@@ -34,16 +35,10 @@ Create Pickup fail incomplete required fields
 Create Pickup now successful
 	Open Ondemand website
 	Login to Ondemand			   ${username}				${password}
-	Set current Time
-	Input Text               ${pickup_location_input}       ${user_address}
-  Click Element						${pickup_location_input}
-  Sleep  10s
-  Execute Javascript    	$($('${pickup_google_item}')[0]).click()
+	Create Pickup location					${user_address}
   Sleep  5s
-	Click Element					${pickup_now}
-	Input Text							${sender_name}							${settinguser_name}
-  Input Text							${sender_phone}							${user_phone}
-  Input Text							${sender_email}							${settinguser_email}
+	Click Element						${pickup_now}
+	Complete sender details
 	Click Element    				${submit_pickup}
 	Sleep  5s
  	Element Should Be Visible				${dropoff_modal}

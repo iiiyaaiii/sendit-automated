@@ -12,8 +12,12 @@ Resource			keyword_Dropoff.robot
 Create drop off and select parcel successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
-  Create Pickup location					 ${user_address}			${hr_afternoon}-14		${min}-30
-  Sleep  5s
+  Create Pickup location					${user_address}
+  Set pickup date next month
+  Set pickup time					17				50
+  Complete sender details
+  Click Element    				${submit_pickup}
+  Sleep  2s
   Set Dropoff location             ${dropoff1_location}       ${dropoff1_address}
   Sleep  5s
   Set Dropoff contact person       ${contact_person1}          ${contact_name1}
@@ -30,8 +34,12 @@ Create drop off and select parcel successful
 Create drop off fail incomplete required fields
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
-  Create Pickup location					 ${user_address}			${hr_afternoon}-14		${min}-30
-  Sleep  3s
+  Create Pickup location					${user_address}
+  Set pickup date next month
+  Set pickup time					17				50
+  Complete sender details
+  Click Element    				${submit_pickup}
+  Sleep  2s
   Wait Until Element Is Visible    ${dropoff_modal}     5s
   Set Dropoff location             ${dropoff1_location}       ${dropoff1_address}
 	Sleep  3s
@@ -43,8 +51,12 @@ Create drop off fail incomplete required fields
 Create drop off fail not selecting parcel
     Open Ondemand website
     Login to Ondemand			   ${username}				${password}
-    Create Pickup location					 ${user_address}			${hr_afternoon}-14		${min}-30
-    Sleep  3s
+    Create Pickup location					${user_address}
+  	Set pickup date next month
+    Set pickup time					14				50
+    Complete sender details
+    Click Element    				${submit_pickup}
+  	Sleep  2s
     Wait Until Element Is Visible    ${dropoff_modal}     5s
     Set Dropoff location             ${dropoff1_location}       ${dropoff1_address}
   	Sleep  3s
@@ -56,8 +68,12 @@ Create drop off fail not selecting parcel
 Add more drop off successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
-  Create Pickup location					 ${user_address}			${hr_afternoon}-14		${min}-30
-  Sleep  3s
+  Create Pickup location					${user_address}
+  Set pickup date next month
+  Set pickup time					14				50
+  Complete sender details
+  Click Element    				${submit_pickup}
+  Sleep  2s
   Set Dropoff location             ${dropoff1_location}       ${dropoff1_address}
   Sleep  3s
   Execute Javascript    	$('${pickup_google_item}').click()
@@ -70,8 +86,12 @@ Add more drop off successful
 Delete this Dropoff successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
-  Create Pickup location					 ${user_address}			${hr_afternoon}-14		${min}-30
-  Sleep  3s
+  Create Pickup location					${user_address}
+  Set pickup date next month
+  Set pickup time					10				50
+  Complete sender details
+  Click Element    				${submit_pickup}
+  Sleep  2s
   Set Dropoff and Parcel    2     ID    RETURN
   Execute Javascript               $(${delete_dropoff}).click()
   Sleep  5s
@@ -80,7 +100,11 @@ Delete this Dropoff successful
 Add drop off reach limit 5 locations correctly
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
-  Create Pickup location					 ${user_address}			${hr_beforenoon}-10		${min}-35
-  Sleep  5s
+  Create Pickup location					${user_address}
+  Set pickup date next month
+  Set pickup time					10				50
+  Complete sender details
+  Click Element    				${submit_pickup}
+  Sleep  2s
   Set Dropoff and Parcel    5     DOCUMENT    MAILING
   Element Should Not Be Visible      ${add_more_dropoff}
