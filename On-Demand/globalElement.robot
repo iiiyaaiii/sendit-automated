@@ -105,3 +105,7 @@ ${add_more_parcel}          css=.parcelContainer #addNewDropoff
 ${delete_parcel}            $('.del-dropoff-parcel a.ng-binding')[1]
 ${parceltab1}               css=.parcelContainer li[heading="1"]
 ${parceltab2}               css=.parcelContainer li[heading="2"]
+${dropoff_element}          //*[@id="content3"]/div/div[1]/div/div[3]
+${summary_parcel1}          //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/div[2]
+${summary_parcel2}          //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/div[3]
+${price-distance}           //*[@id="content3"]/div/div[2]/div
