@@ -17,7 +17,8 @@ ${css_loginbtn}								//div[1]/div/div/div/div[3]/button
 ${css_Scannerbtn}							//div[1]/div/div/div[2]/ul/li[6]/a/i
 ${css_Readbtn}								//div/div/div[3]/div/div[2]/div/ul/li[1]/span/span
 ${css_Barcodeinput}						//div/div/div[3]/div/div[3]/div/div/input
-${Barcodeinput}								TSW000700
+${Barcodeinput1}								TSW000700
+${Barcodeinput}								TSW180078149-DOC
 
 
 ${css_SetSizebtn}						//div/div/div[3]/div/div[2]/div/ul/li[2]/span/span
@@ -44,6 +45,22 @@ ${css_Pickupinput}										//div/div/div[3]/div/div[3]/div/div[2]/input
 
 #in Bag
 ${css_InBaginput}										//div/div/div[3]/div/div[3]/div/div/input
+
+#Chack-100
+${Chack-100_Selectbtn}												//div/div/div[3]/div/div[3]/div/div/div/div/div/span/span
+${Chack-100_Select}												//*[contains(text(),'SET 570 2018-07-02 5:10 pm')]
+${Chack-100_Bagbtn}												//div/div/div[3]/div/div[4]/div[1]/div/div[1]/span[1]/span
+${Chack-100_Bag}												//div/div/div[3]/div/div[4]/div[1]/div/div[2]/a
+${Chack-100_LocationBtn}												//div/div/div[3]/div/div[4]/div[1]/div/div[1]/span[2]/span
+
+
+#Deliver
+${Deliver_SelectStatus}															//div/div/div[3]/div/div[3]/div/div[1]/ul/li[1]
+${Deliver_Passthrough_SelectStatus}									//div/div/div[4]/div/div[3]/div/div[1]/ul/li[2]
+
+${css_Deliverinput}																	//div/div/div[3]/div/div[3]/div/div[2]/div/input
+
+${css_Deliver_Passthroughinput}																	//div/div/div[4]/div/div[3]/div/div[2]/div/input
 
 *** Keywords ***
 Login to 2Stage by		    [Arguments]			${username}					${password}
@@ -111,27 +128,60 @@ In Bag
 Return Courier
 	Wait Until Element Is Visible 			    ${css_ReturnCourierbtn}  		5s
 	Click element    						            ${css_ReturnCourierbtn}
-Scan EYCode
-	Wait Until Element Is Visible 			    ${css_ScanEYCodebtn}  		5s
-	Click element    						            ${css_ScanEYCodebtn}
+
 Move Bag
 	Wait Until Element Is Visible 			    ${css_MoveBagbtn}  		5s
 	Click element    						            ${css_MoveBagbtn}
+
 Chack-100
 	Wait Until Element Is Visible 			    ${css_Chack-100btn}  		5s
 	Click element    						            ${css_Chack-100btn}
+	Wait Until Element Is Visible 			    ${Chack-100_Selectbtn}  		5s
+	Click element    						            ${Chack-100_Selectbtn}
+	Wait Until Element Is Visible 			    ${Chack-100_Select}  		5s
+	Click element    						            ${Chack-100_Select}
+	Wait Until Element Is Visible 			    ${Chack-100_Bagbtn}	  		5s
+	Click element 													${Chack-100_Bagbtn}
+	Wait Until Element Is Visible 			    ${Chack-100_Bag}	  		5s
+	Click element 													${Chack-100_Bag}
+	# Wait Until Element Is Visible 			    ${Chack-100_LocationBtn}	  		5s
+	# Click element 													${Chack-100_LocationBtn}
+
+
 Returned Customer
 	Wait Until Element Is Visible 			    ${css_Chack-100btn}  		5s
 	Click element    						            ${css_Chack-100btn}
+
 Airway Bill
 	Wait Until Element Is Visible 			    ${css_AirwayBillbtn}	 		5s
 	Click element    						            ${css_AirwayBillbtn}
+
 Print Bag
 	Wait Until Element Is Visible 			    ${css_PrintBagbtn}	 		5s
 	Click element    						            ${css_PrintBagbtn}
+
 Deliver
 	Wait Until Element Is Visible 			    ${css_Deliverbtn}		 		5s
 	Click element    						            ${css_Deliverbtn}
+	Wait Until Element Is Visible 			    ${Deliver_SelectStatus}			 		5s
+	Click element    						            ${Deliver_SelectStatus}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_Deliverinput}		 		5s
+	Click element    						            ${css_Deliverinput}
+	Input Text    													${css_Deliverinput}	    		${Barcodeinput}
+	Press Key    														${css_Deliverinput}	    \\13
+
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${Deliver_Passthrough_SelectStatus}			 		5s
+	Click element    						            ${Deliver_Passthrough_SelectStatus}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_Deliver_Passthroughinput}			 		5s
+	Click element    						            ${css_Deliver_Passthroughinput}
+	Input Text    													${css_Deliver_Passthroughinput}		    		${Barcodeinput}
+	Press Key    														${css_Deliver_Passthroughinput}		    \\13
+
+
+
 
 
 *** Test Cases ***
@@ -145,8 +195,8 @@ Deliver
 			# Return Courier
 			# Scan EYCode
 			# Move Bag
-			# Chack-100
+		  Chack-100
 			# Returned Customer
 			# Airway Bill
 			# Print Bag
-			# Deliver
+			Deliver
