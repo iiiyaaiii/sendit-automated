@@ -17,27 +17,20 @@ Set pickup date next month
   Element Should Be Visible    			${selected_date}
   Click Element											${submit_datetime}
 
-# Set current time
-#   	${date} =		Get Current Date	UTC
-#   	Log To Console    							${date}
-#   	${hr}=   	Get Current Date   result_format=%H
-#   	${min}=   	Get Current Date   result_format=%M
-#     Wait Until Element Is Visible			${clock} 				10s
-#     Click Element						${submit_datetime}
-#     Click Element						${submit_datetime}
-
 Set pickup time        [Arguments]       ${input_hr}       ${input_min}
   ${input_hr} =   Convert To Integer    ${input_hr}
-  ${tmphour} =   	Get Current Date   result_format=%H
-  ${tmphour} =   Convert To Integer    ${tmphour}
-  Log To Console          ${tmphour}
-  ${present_time} =   Run Keyword And Return Status    Should Be Equal    ${input_hr}   ${tmphour}
-  Log To Console    ${present_time}
-  ${input_hr} =   Run Keyword If    ${present_time} == True      Set Variable     ${input_hr+1}
-  Log To Console          ${input_hr}
-  ${hour} =               Run Keyword If    ${input_hr} < 12      Set Variable    ${hr_beforenoon}
-  ...                     ELSE IF           ${input_hr} >= 12     Set Variable    ${hr_afternoon}
-  Click Element    				${hour}-${input_hr}
+  ${tmphour} =   	Get Current Date      result_format=%H
+  ${tmphour} =    Convert To Integer    ${tmphour}
+  ${pickup_hr} =   Set Variable         ${input_hr}
+  # Log To Console          ${tmphour}
+  ${present_time}=   Run Keyword And Return Status    Should Be Equal    ${input_hr}   ${tmphour}
+  # Log To Console    ${present_time}
+  ${pickup_hr}=   Run Keyword If      ${present_time} == True       Set Variable      ${input_hr+1}
+  ...             ELSE IF             ${present_time} == False      Set Variable      ${input_hr}
+  # Log To Console          ${pickup_hr}
+  ${hour}=        Run Keyword If      ${pickup_hr} < 12             Set Variable      ${hr_beforenoon}
+  ...                     ELSE IF     ${pickup_hr} >= 12            Set Variable      ${hr_afternoon}
+  Click Element    				${hour}-${pickup_hr}
   Sleep  3s
   Click Element						${submit_datetime}
   Sleep  5s

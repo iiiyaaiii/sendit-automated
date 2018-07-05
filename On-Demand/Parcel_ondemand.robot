@@ -16,7 +16,7 @@ Add more parcel successful
   Login to Ondemand			   ${username}				${password}
   Create Pickup location					${user_address}
   Set pickup date next month
-  Set pickup time					19				50
+  Set pickup time					11				50
   Complete sender details
   Click Element    				${submit_pickup}
   Sleep  2s
@@ -39,7 +39,7 @@ Add parcel reach limit 5 parcels correctly
   Login to Ondemand			   ${username}				${password}
   Create Pickup location					${user_address}
   Set pickup date next month
-  Set pickup time					17				50
+  Set pickup time					14				30
   Complete sender details
   Click Element    				${submit_pickup}
   Sleep  2s
@@ -66,9 +66,10 @@ Delete this parcel successful
   Set Dropoff contact phone number      ${phone_number1}            ${contact_phone1}
   Set Dropoff comment                   ${dropoff_comment1}         ${contact_comment1}
   Set many Parcels        2        DOCUMENT       MAILING
-  Sleep  2s
-  Click Element           ${delete_parcel}
-  ${more_parcel} =       Get Element Count    .parcelContainer .ng-scope ng-isolate-scope
-  ${active_parcel} =     Get Element Count    .parcelContainer .ng-isolate-scope.active
+  Sleep  5s
+  Execute Javascript     ${delete_parcel}.click()
+  ${more_parcel} =       Get Element Count    ${add_more_parcel}
+  ${active_parcel} =     Get Element Count    ${parceltab1}
+  Element Should Not Be Visible               ${parceltab2}
   Should Be True	${more_parcel} == 1
   Should Be True	${active_parcel} == 1

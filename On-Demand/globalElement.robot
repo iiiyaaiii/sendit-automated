@@ -103,3 +103,5 @@ ${pacel_insurance_value}    css=.blue .service-value
 ${complete_parcel_next_btn}          css=button[ng-click="vm.doPriceAndConfirm()"]
 ${add_more_parcel}          css=.parcelContainer #addNewDropoff
 ${delete_parcel}            $('.del-dropoff-parcel a.ng-binding')[1]
+${parceltab1}               css=.parcelContainer li[heading="1"]
+${parceltab2}               css=.parcelContainer li[heading="2"]
