@@ -79,7 +79,7 @@ Submit parcel successful and display summary
   Login to Ondemand			   ${username}				${password}
   Create Pickup location					${user_address}
   Set pickup date next month
-  Set pickup time					11				20
+  Set pickup time					15				20
   Complete sender details
   Click Element    				${submit_pickup}
   Sleep  2s
@@ -89,13 +89,16 @@ Submit parcel successful and display summary
   Set Dropoff contact phone number      ${phone_number1}            ${contact_phone1}
   Set Dropoff comment                   ${dropoff_comment1}         ${contact_comment1}
   Sleep  3s
-  Set many Parcels        2        FOOD    ID
+  Set many Parcels        2       DOCUMENT    ID
   Sleep  3s
   Click Element                    ${complete_parcel_next_btn}
   Sleep  10s
   Element Should Be Visible        ${confirmation_modal}
-  Check send date time    11       20
+  Check send date time      3       20
   Element Text Should Be        ${dropoff_element}     1 DROPOFF
-  Element Should Be Visible     ${summary_parcel1}
-  Element Should Be Visible     ${summary_parcel2}
-  Element Should Be Visible     ${price-distance}
+  Check parcels summary detail    1     DOCUMENT
+  Check parcels summary detail    1     ID
+  Check parcels summary detail    1     INSURANCE
+  Check parcels summary detail    2     DOCUMENT
+  Check parcels summary detail    2     ID
+  Check parcels summary detail    2     INSURANCE

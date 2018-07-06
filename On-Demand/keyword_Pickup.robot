@@ -5,7 +5,7 @@ Create Pickup location    [Arguments]     ${address}
   Wait Until Element Is Visible        ${pickup_location_input}   5s
   Input Text               ${pickup_location_input}       ${address}
   Click Element						${pickup_location_input}
-  Sleep  10s
+  Sleep  5s
   Execute Javascript    	$($('${pickup_google_item}')[0]).click()
   Sleep  5s
 

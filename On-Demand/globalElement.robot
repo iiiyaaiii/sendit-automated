@@ -105,7 +105,19 @@ ${add_more_parcel}          css=.parcelContainer #addNewDropoff
 ${delete_parcel}            $('.del-dropoff-parcel a.ng-binding')[1]
 ${parceltab1}               css=.parcelContainer li[heading="1"]
 ${parceltab2}               css=.parcelContainer li[heading="2"]
+
+#Summary
+${summary_pickup_date}      css=div[ng-hide="vm.sendImmediately"]
 ${dropoff_element}          //*[@id="content3"]/div/div[1]/div/div[3]
 ${summary_parcel1}          //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/div[2]
 ${summary_parcel2}          //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/div[3]
 ${price-distance}           //*[@id="content3"]/div/div[2]/div
+${img_parcel_Return}        img[src="../../images/repeat.png"]
+${img_parcel_Document}      img[src="../../images/documents.png"]
+${img_parcel_Mailing}       img[src="../../images/mailing.png"]
+${img_parcel_Purchase}      img[src="../../images/purchase.png"]
+${img_parcel_Cash}          img[src="../../images/cash.png"]
+${img_parcel_Food}          img[src="../../images/food.png"]
+${img_parcel_ID}            img[src="../../images/idApproval.png"]
+${img_parcel_Insurance}     img[src="../../images/insurance.png"]
+${element_parcel}           div[ng-repeat="service in parcel.services"]

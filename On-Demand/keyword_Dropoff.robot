@@ -40,7 +40,9 @@ Select Insurance    [Arguments]       ${value}
 Set Dropoff location     [Arguments]      ${dropoff_element}    ${location}
   Wait Until Element Is Visible    ${dropoff_modal}     5s
   Input Text                       ${dropoff_element}      ${location}
-  Sleep  5s
+  Sleep  3s
+  Click Element                    ${dropoff_element}
+  Sleep  3s
 	Execute Javascript    	$('${pickup_google_item}').click()
 
 Set Dropoff contact person      [Arguments]       ${contact_element}      ${name}
