@@ -121,4 +121,5 @@ ${img_parcel_Food}          /img[6]
 ${img_parcel_ID}            /img[7]
 ${img_parcel_Insurance}     /img[8]
 ${element_parcel}          //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div
-                  
+${bookmark_star}           css=.bookmark.glyphicon-star-empty
+${input_bookmark_name}     css=input[placeholder="Name of this bookmark"]       

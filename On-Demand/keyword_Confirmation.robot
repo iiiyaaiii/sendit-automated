@@ -44,3 +44,14 @@ Check parcels summary detail    [Arguments]       ${parcel_no}    ${item_no}    
   Element Should Be Visible     ${summary_parcel1}
   Element Should Be Visible     ${summary_parcel2}
   Element Should Be Visible     ${price-distance}
+
+Bookmark address         [Arguments]        ${bookmark_name}
+  Click Element                    ${bookmark_star}
+  Wait Until Element Is Visible    ${input_bookmark_name}     10s
+  Input Text                       ${input_bookmark_name}     ${bookmark_name}
+  Click Element                    ${done_btn}
+  Sleep  3s
+  Click Element                   //*[@id="panel-heading-style"]/h4/a/div/span[2]
+  Sleep  5s
+  Click Element                   span[tooltip="Use bookmark"]
+  Element Should Be Visible       css=.bookmark-modal
