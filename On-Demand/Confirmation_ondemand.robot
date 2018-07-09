@@ -41,7 +41,7 @@ Submit parcel successful and display summary
   Check parcels summary detail    2     2     ID
   Check parcels summary detail    2     3     INSURANCE
 
-Add address to bookmark successful
+Add pickup address to bookmark successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
   Create Pickup location					${user_address}
@@ -59,4 +59,38 @@ Add address to bookmark successful
   Sleep  3s
   Click Element                    ${complete_parcel_next_btn}
   Sleep  3s
-  Bookmark address                 Sendit Richmond Office
+  Bookmark address                 ${bookmark_star_pickup}        Sendit Richmond Office
+  Sleep  2s
+  Use this address
+  Click Element                    ${done_btn}
+  Click Element    				         ${submit_pickup}
+  Click Element                    ${complete_parcel_next_btn}
+  Element Should Be Visible        ${confirmation_modal}
+  Check bookmark address display in summary     ${summary_pickup_addr}     ${user_address}
+
+Add dropoff address to bookmark successful
+  Open Ondemand website
+  Login to Ondemand			   ${username}				${password}
+  Create Pickup location					${user_address}
+  Set pickup date next month
+  Set pickup time					15				20
+  Complete sender details
+  Click Element    				${submit_pickup}
+  Sleep  2s
+  Set Dropoff location             ${dropoff1_location}       ${dropoff2_address}
+  Sleep  5s
+  Set Dropoff contact person       ${contact_person1}          ${contact_name1}
+  Set Dropoff contact phone number      ${phone_number1}            ${contact_phone1}
+  Set Dropoff comment                   ${dropoff_comment1}         ${contact_comment1}
+  Select Parcel                    DOCUMENT
+  Sleep  3s
+  Click Element                    ${complete_parcel_next_btn}
+  Sleep  3s
+  Bookmark address                 ${bookmark_star_dropoff}        AIA Ascend
+  Sleep  2s
+  Use this address
+  Click Element                    ${done_btn}
+  Click Element    				         ${submit_pickup}
+  Click Element                    ${complete_parcel_next_btn}
+  Element Should Be Visible        ${confirmation_modal}
+  Check bookmark address display in summary     ${summary_dropoff_addr}     ${dropoff2_location}

@@ -12,7 +12,7 @@ ${newpassword}					    new12345
 ${settinguser_name}				  Ms.Pitchaya
 ${settinguser_email}			  pitchaya_ket@sendit.asia
 ${user_phone}					      0929929992
-${user_address}					    Asoke Tower
+${user_address}					    Richmond Office Building
 ${error_alertmsg}				    css=div.alert-danger
 ${Login_menu}					      css=.login-menu
 ${Login_modal}					    css=#loginTab
@@ -55,6 +55,13 @@ ${sender_comment}           css=textarea[placeholder="Comments(floor, building -
 ${user_pickup_comment}      18th floor
 ${dropoff_modal}            css=div.dropoffContainer
 ${parcel_modal}             css=div.parcelContainer
+${pickup_tab}               //*[@id="panel-heading-style"]/h4/a/div/span[2]
+${pickup_bookmark}          //*[@id="content1"]/div/div/form/fieldset/div[1]/div/span
+
+#Bookmark
+${bookmark_modal}           css=.bookmark-modal
+${bookmark_item_name}       css=.bookmarkPicker h4
+${usethis_bookmark}         css=.useThis
 
 #Dropoff
 ${dropoff1_location}        css=input[placeholder="Dropoff1 Location"]
@@ -62,7 +69,7 @@ ${dropoff2_location}        css=input[placeholder="Dropoff2 Location"]
 ${dropoff3_location}        css=input[placeholder="Dropoff3 Location"]
 ${dropoff4_location}        css=input[placeholder="Dropoff4 Location"]
 ${dropoff5_location}        css=input[placeholder="Dropoff5 Location"]
-${dropoff1_address}         Richmond Office Building
+${dropoff1_address}         Q. House Lumpini
 ${dropoff2_address}         AIA
 ${dropoff3_address}         Interchange Tower
 ${dropoff4_address}         FYI Center
@@ -97,7 +104,7 @@ ${parcel_Purchase}          .parcelContainer li[tooltip="Purchase services"]
 ${parcel_Mailing}           .parcelContainer li[tooltip="Mailing services"]
 ${parcel_Insurance}         .parcelContainer li[tooltip="Extra Insurance"]
 ${COD_input}                css=input[placeholder="THB"]
-${done_btn}                 css=a.done
+${done_btn}                 css=.done
 ${parcel_cash_value}        css=.green .service-value
 ${pacel_insurance_value}    css=.blue .service-value
 ${complete_parcel_next_btn}          css=button[ng-click="vm.doPriceAndConfirm()"]
@@ -120,6 +127,9 @@ ${img_parcel_Cash}          /img[5]
 ${img_parcel_Food}          /img[6]
 ${img_parcel_ID}            /img[7]
 ${img_parcel_Insurance}     /img[8]
-${element_parcel}          //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div
-${bookmark_star}           css=.bookmark.glyphicon-star-empty
-${input_bookmark_name}     css=input[placeholder="Name of this bookmark"]       
+${element_parcel}           //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div
+${bookmark_star_pickup}     css=.bookmark.glyphicon-star-empty
+${bookmark_star_dropoff}    $('.bookmark.glyphicon-star-empty')[1]
+${input_bookmark_name}      css=input[placeholder="Name of this bookmark"]
+${summary_pickup_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/h4/div
+${summary_pickup_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/h4/div
