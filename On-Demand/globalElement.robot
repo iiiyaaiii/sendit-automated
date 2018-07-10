@@ -55,13 +55,15 @@ ${sender_comment}           css=textarea[placeholder="Comments(floor, building -
 ${user_pickup_comment}      18th floor
 ${dropoff_modal}            css=div.dropoffContainer
 ${parcel_modal}             css=div.parcelContainer
-${pickup_tab}               //*[@id="panel-heading-style"]/h4/a/div/span[2]
+${tab_element}              $('.editContent span.ng-binding')
 ${pickup_bookmark}          //*[@id="content1"]/div/div/form/fieldset/div[1]/div/span
 
 #Bookmark
 ${bookmark_modal}           css=.bookmark-modal
 ${bookmark_item_name}       css=.bookmarkPicker h4
 ${usethis_bookmark}         css=.useThis
+${input_bookmark_name}      css=input[placeholder="Name of this bookmark"]
+${cancel_bookmark}          css=div.cancel
 
 #Dropoff
 ${dropoff1_location}        css=input[placeholder="Dropoff1 Location"]
@@ -93,6 +95,7 @@ ${contact_phone5}           0988689958
 ${confirmation_modal}       css=#content3
 ${add_more_dropoff}         css=li#addNewDropoff
 ${delete_dropoff}           $('.del-dropoff-parcel a.ng-binding')[0]
+${dropoff_bookmark}         //*[@id="formDropoff"]/fieldset/div[2]/div/div/div[2]/div[1]/div/span
 
 #Parcel
 ${parcel_Cash}              .parcelContainer li[tooltip="Cash on delivery"]
@@ -128,8 +131,7 @@ ${img_parcel_Food}          /img[6]
 ${img_parcel_ID}            /img[7]
 ${img_parcel_Insurance}     /img[8]
 ${element_parcel}           //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div
-${bookmark_star_pickup}     css=.bookmark.glyphicon-star-empty
+${bookmark_star_pickup}     $('.bookmark.glyphicon-star-empty')[0]
 ${bookmark_star_dropoff}    $('.bookmark.glyphicon-star-empty')[1]
-${input_bookmark_name}      css=input[placeholder="Name of this bookmark"]
 ${summary_pickup_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/h4/div
-${summary_pickup_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/h4/div
+${summary_dropoff_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/h4/div

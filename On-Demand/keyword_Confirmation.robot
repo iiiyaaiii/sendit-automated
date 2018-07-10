@@ -44,25 +44,45 @@ Check parcels summary detail    [Arguments]       ${parcel_no}    ${item_no}    
   Element Should Be Visible     ${summary_parcel2}
   Element Should Be Visible     ${price-distance}
 
-Bookmark address         [Arguments]        ${bookmark_star_element}        ${bookmark_name}
-  ${pick_up} =          Run Keyword And Return Status         ${bookmark_star_element} == ${bookmark_star_pickup}
-  Run Keyword If        ${pick_up} == True       Click Element      ${bookmark_star_element}
-  ...    ELSE IF        ${pick_up} == False      Execute Javascript      $(${bookmark_star_element}).click()
+CLick tab         [Arguments]         ${tab_name}
+  ${tab_item} =        Run Keyword If      '${tab_name}' == 'PICKUP'
+  ...                         Set Variable        $(${tab_element}[0])
+  ...                         ELSE IF             '${tab_name}' == 'DROPOFF'
+  ...                         Set Variable        $(${tab_element}[1])
+  ...                         ELSE IF             '${tab_name}' == 'CONFIRMATION'
+  ...                         Set Variable        $(${tab_element}[4])
+  ...                         ELSE IF             '${tab_name}' == 'PAYMENT'
+  ...                         Set Variable        $(${tab_element}[5])
+  Execute Javascript          ${tab_item}.click()
+
+Bookmark address         [Arguments]        ${tab}       ${bookmark_star_element}        ${bookmark_name}
+  Execute Javascript      $(${bookmark_star_element}).click()
 
   Wait Until Element Is Visible    ${input_bookmark_name}     10s
   Input Text                       ${input_bookmark_name}     ${bookmark_name}
   Click Element                    ${done_btn}
   Sleep  3s
-  Click Element                    ${pickup_tab}
+  CLick tab                        ${tab}
   Sleep  5s
-  Click Element                   ${pickup_bookmark}
+  ${bookmark_item} =          Run Keyword And Return Status         Should Be Equal    ${tab}     PICKUP
+  Run Keyword If        ${bookmark_item} == True       Click Element      ${pickup_bookmark}
+  ...    ELSE IF        ${bookmark_item} == False      Click Element      ${dropoff_bookmark}
   Element Should Be Visible       ${bookmark_modal}
+  Sleep  10s
   ${bookmark_address} =           Get Text                    ${bookmark_item_name}
   Should Be Equal                 ${bookmark_address}         ${bookmark_name}
 
 Use this address
   Click Element                   ${bookmark_item_name}
+  Sleep  3s
   Click Element                   ${usethis_bookmark}
+
+Search bookmark         [Arguments]       ${bookmark_name}
+  Input Text                      css=input[placeholder="Search"]       ${bookmark_name}
+  Sleep  2s
+  ${bookmark_address} =           Get Text                    ${bookmark_item_name}
+  Should Be Equal                 ${bookmark_address}         ${bookmark_name}
+
 
 Check bookmark address display in summary       [Arguments]         ${element}        ${bookmark_address}
   ${summary_address} =            Get Text        ${element}
