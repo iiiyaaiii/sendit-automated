@@ -9,11 +9,11 @@ ${url_login}									https://staging.customer.sendit.asia/th/2stage/login
 ${admin_username}							admin@sendit.asia
 ${admin_password}							12345678
 #element login-home page
-${url_2stage_activdelivery}					https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
-${css_login_modal}									css=div.login-container__loginform___2rEJe
-${css_username}											//div[1]/div/div/div/div[1]/input
-${css_password}											//div[1]/div/div/div/div[2]/input
-${css_loginbtn}											//div[1]/div/div/div/div[3]/button
+${url_2stage_activdelivery}							https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
+${css_login_modal}											css=div.login-container__loginform___2rEJe
+${css_username}													//div[1]/div/div/div/div[1]/input
+${css_password}													//div[1]/div/div/div/div[2]/input
+${css_loginbtn}													//div[1]/div/div/div/div[3]/button
 #Go to Location Management Page
 ${css_LocationManagementbtn}						//div/div/div[2]/ul/li[11]/a/i
 ${css_inputSearchLocationManagement}		//div/div/div[3]/div/div[1]/div/input
@@ -40,12 +40,12 @@ ${css_inputCourierEmail}								//div/div/div[3]/div/div[3]/div/div[5]/input
 ${css_inputCourierPhone}								//div/div/div[3]/div/div[3]/div/div[6]/input
 
 #Data For test Create
-${CourierName}								Kerry Express Rama2
-${CourierCode}								Kerry 543rama2
-${CourierAddress}							Kerry Express Rama 2
-${CourierContactPersonName}		Piyamas Sea-Jung
-${CourierEmail}								KerryExpress_Rama2@Kerry.th
-${CourierPhone}								099231999009
+${CourierName}											Kerry Express  Siam
+${CourierCode}											Kerry 5ddSiam
+${CourierAddress}										Kerry Express At Siam
+${CourierContactPersonName}					Sara Havana
+${CourierEmail}											KerryExpress_Siam@Kerry.th
+${CourierPhone}											090000999009
 
 
 #Data For test Edit
@@ -66,13 +66,13 @@ ${css_EditDisable_Enablebtn}                //div/div/div[3]/div/div[3]/div/div[
 
 *** Keywords ***
 Login to 2Stage by		[Arguments]			${username}					${password}
-	Open Browser												${url_login}					chrome
+	Open Browser										${url_login}					chrome
 	Maximize Browser Window
-	Element Should Be Visible						${css_login_modal}				10s
-	Input Text													${css_username}					${username}
-	Input Text													${css_password}					${password}
+	Element Should Be Visible				${css_login_modal}				10s
+	Input Text											${css_username}					${username}
+	Input Text											${css_password}					${password}
 	Sleep  3s
-	Click element  											${css_loginbtn}
+	Click element  									${css_loginbtn}
 	Sleep  1s
 Go to Location Management page
 	Wait Until Element Is Visible 			${css_LocationManagementbtn}		5s
@@ -83,6 +83,9 @@ select Courier
 	Click element    										${css_inputSearchLocationManagement}
 	Wait Until Element Is Visible 			${css_Courierbtn}		5s
 	Click element    										${css_Courierbtn}
+
+
+
 
 
 
@@ -118,6 +121,9 @@ Create Input Data
 
 
 
+
+
+
 select Courier for edit
 	Wait Until Element Is Visible 			${css_SelecetCourierForEdit}		5s
 	Click Element												${css_SelecetCourierForEdit}
@@ -129,11 +135,11 @@ Edit Input Data
 	#CourierName
 	Wait Until Element Is Visible 			${css_inputCourierName}		5s
 	Click element    										${css_inputCourierName}
-	Input Text 													${css_inputCourierName}					${CourierNameEdit}
+	Input Text 													${css_inputCourierName}			${CourierNameEdit}
 	#CourierCode
 	Wait Until Element Is Visible 			${css_inputCourierCode}		5s
 	Click element    										${css_inputCourierCode}
-	Input Text 													${css_inputCourierCode}					${CourierCodeEdit}
+	Input Text 													${css_inputCourierCode}			${CourierCodeEdit}
 	#CourierAddress
 	Wait Until Element Is Visible 			${css_inputCourierAddress}		5s
 	Click element    										${css_inputCourierAddress}
@@ -162,29 +168,37 @@ SAVE btn
 
 
 
-Search Location Management
-	Wait Until Element Is Visible 			${css_Courierbtn}		5s
-	Click element    						${css_Courierbtn}
+# Search Location Management
+# 	Wait Until Element Is Visible 			${css_Courierbtn}		5s
+# 	Click element    						${css_Courierbtn}
 
-Search Location Management Courier Status All
-	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
-	Wait Until Element Is Visible 			${css_StatusAllbtn}		5s
-	Click element    						${css_StatusAllbtn}
-	Wait Until Element Is Visible 			${css_inputSearch}		5s
-	Click element    						${css_inputSearch}
+# Search Location Management Courier Status All
+# 	Wait Until Element Is Visible 			${css_Statusbtn}		5s
+# 	Click element    						${css_Statusbtn}
+# 	Wait Until Element Is Visible 			${css_StatusAllbtn}		5s
+# 	Click element    						${css_StatusAllbtn}
+# 	Wait Until Element Is Visible 			${css_inputSearch}		5s
+# 	Click element    						${css_inputSearch}
 
-Search Location Management Courier Status Active
-	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
-	Wait Until Element Is Visible 			${css_StatusActivebtn}		5s
-	Click element    						${css_StatusActivebtn}
+# Search Location Management Courier Status Active
+# 	Wait Until Element Is Visible 			${css_Statusbtn}		5s
+# 	Click element    						${css_Statusbtn}
+# 	Wait Until Element Is Visible 			${css_StatusActivebtn}		5s
+# 	Click element    						${css_StatusActivebtn}
 
-Search Location Management Courier Status Inactive
-	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
-	Wait Until Element Is Visible 			${css_Statusinactivebtn}		5s
-	Click element    						${css_Statusinactivebtn}
+# Search Location Management Courier Status Inactive
+# 	Wait Until Element Is Visible 			${css_Statusbtn}		5s
+# 	Click element    						${css_Statusbtn}
+# 	Wait Until Element Is Visible 			${css_Statusinactivebtn}		5s
+# 	Click element    						${css_Statusinactivebtn}
+
+
+
+
+
+
+
+
 
 
 
@@ -242,17 +256,18 @@ Search Location Management Courier Status Inactive
 	Edit Input Data
 	SAVE btn
 
-# 2Stage website Edit DISABLE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select Courier
-# 	select Courier for edit
-# 	Edit disable
-# 	SAVE btn
-# 2Stage website Edit ENABLE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select Courier
-# 	select Courier for edit
-# 	Edit enable
-# 	SAVE btnr
+2Stage website Edit DISABLE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select Courier
+	select Courier for edit
+	Edit disable
+	SAVE btn
+
+2Stage website Edit ENABLE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select Courier
+	select Courier for edit
+	Edit enable
+	SAVE btn

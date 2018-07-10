@@ -35,7 +35,7 @@ ${ConfirmPassword2}						12345678
 
 *** Keywords ***
 Login to 2Stage by		    [Arguments]			${username}					${password}
-	Open Browser							              ${url_login}				firefox
+	Open Browser							              ${url_login}				chrome
 	Maximize Browser Window
 	Element Should Be Visible				        ${css_login_modal}				5s
 	Input Text								              ${css_username}					${username}
@@ -75,6 +75,7 @@ Change Password Save Return
 				Click Element 		//*[contains(text(),'Change password')]
 				Wait Until Element Is Visible 			   ${css_CurrentPassword}	      		5s
 				Click element                          ${css_CurrentPassword}
+				Sleep    3s
 				Input Text    												 ${css_CurrentPassword}		${CurrentPassword2}
 				Wait Until Element Is Visible 			   ${css_NewPassword}	      		5s
 				Click element                          ${css_NewPassword}
@@ -85,14 +86,12 @@ Change Password Save Return
 				Wait Until Element Is Visible 			   ${css_ChangePasswordbtn}	      		5s
 				Click element                          ${css_ChangePasswordbtn}
 
-
-
 Logout
 	Wait Until Element Is Visible		css=.globalnav-component__menulist___279ou
 	Mouse Over			css=.globalnav-component__menulist___279ou .globalnav-component__menutext___v7ebC
-	Sleep  1s
+	Sleep  5s
 	Click Element 		//*[contains(text(),'Logout')]
-	Sleep  1s
+	Sleep  5s
 	Confirm Action
 	Sleep  3s
 	Location Should Be		https://staging.customer.sendit.asia/th/2stage/login
@@ -103,9 +102,20 @@ Logout
 
 
 *** Test Cases ***
-2Stage website Home Admin
+2Stage website Home Admin Change Password X
       Login to 2Stage by						${admin_username}				${admin_password}
       Change Password X
+			Sleep    3s
+			Logout
+
+2Stage website Home Admin Change Password 12341234
+      Login to 2Stage by						${admin_username}				${admin_password}
 			Change Password Save
+			Sleep    3s
+			Logout
+
+2Stage website Home Admin Change Password 12345678
+			Login to 2Stage by						${admin_username}				${NewPassword}
 			Change Password Save Return
+			Sleep    3s
 			Logout

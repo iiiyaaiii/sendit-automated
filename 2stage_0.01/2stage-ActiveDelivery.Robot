@@ -20,8 +20,9 @@ ${css_SetViewbtn}						//div/div/div[3]/div/div[1]/div[2]/a[2]/span
 ${css_Customerbtn}					//div/div/div[3]/div/div[1]/div[1]/div[2]/div/span/span
 ${Customer}									//*[contains(text(),'ADEN')]
 ${css_startDatebtn}					//div/div/div[3]/div/div[1]/span/div[1]/div[2]/div/div[1]/div[1]
-${startDate}								//div/div/div[3]/div/div[1]/span/div[1]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr[1]/td[6]/button
-${LastDate}									//div/div/div[3]/div/div[1]/span/div[1]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr[5]/td[6]/button
+${backDatebtn}							//div/div/div[3]/div/div[1]/span/div[1]/div[2]/div/div[2]/div/div/div[2]/div[1]/button[1]
+${startDate}								//div/div/div[3]/div/div[1]/span/div[1]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr[4]/td[2]/button
+${LastDate}									//div/div/div[3]/div/div[1]/span/div[1]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/div[3]/table/tbody/tr[3]/td[4]/button
 ${css_ParcelSizebtn}				//div/div/div[3]/div/div[1]/span/div[2]/div[2]/div/span/span
 ${ParcelSize}								//*[contains(text(),'UNKNOWN')]
 ${css_Statusbtn}						//div/div/div[3]/div/div[1]/span/div[3]/div[2]/div/span/span
@@ -35,7 +36,8 @@ ${css_Historybtn}						//div/div/div[3]/div/div[1]/div[1]/div[2]/button[2]/span
 ${css_Customerbtn2}					//div/div/div[3]/div/div[1]/div[2]/div[2]/div/span/span
 ${css_Statusbtn2}						//div/div/div[3]/div/div[1]/span/div[2]/div[2]/div/span/span
 
-${css_REFRESHbtn}						//div/div/div[3]/div/div[1]/div[4]/a[3]/span
+${css_REFRESHbtn}					css=.sendicon-icon-sync
+
 
 
 ${css_Actionbtn}								//div/div/div[3]/div/div[1]/div[4]/a[4]/span
@@ -47,13 +49,19 @@ ${css_Customizecolumnsbtn}			//div/div/div[3]/div/div[1]/div[4]/ul/li[3]/a/span
 ${css_Viewclicklinkbtn}			//div/div/div[3]/div/div[4]/table/tbody/tr[1]/td[2]/a
 
 
+#${css_Set569btn}			//div/div/div[3]/div/div[2]/div[9]
+${css_Set569btn}								//div/div/div[3]/div/div[2]/div[1]
+
+
 #Customizecolumns
 ${css_ParcelGroupbtn}						//div/div/div[3]/div/div[5]/div/div[1]/div[1]/label[3]/input
 ${css_Savebtn}									//div/div/div[3]/div/div[5]/div/div[2]/button
 ${css_Xbtn}											//div/div/div[3]/div/div[5]/div/button/i
 
+
+
 #edit
-${css_editbtn}									//div/div/div[3]/div/div[4]/table/tbody/tr[1]/td[15]/button/i
+${css_editbtn}									//div/div/div[3]/div/div[4]/table/tbody/tr[1]/td[16]/button/i
 ${css_edit1btn}									//div/div/div[3]/div/div[5]/div/div[2]/div[2]/i
 ${css_edit1Statusbtn}						//div/div/div[3]/div/div[5]/div/div[2]/div[2]/div[1]/div[1]/div/div/span/span
 ${edit1Status}									//*[contains(text(),'READY_TO_PICK_UP')]
@@ -61,37 +69,38 @@ ${css_edit1inputnote}									//div/div/div[3]/div/div[5]/div/div[2]/div[2]/div[
 ${edit1inputnote}											test
 ${css_edit1Savebtn}									//div/div/div[3]/div/div[5]/div/div[2]/div[2]/div[2]/div/button[1]
 
-${css_editSenderbtn}						//div/div/div[3]/div/div[5]/div/div[2]/table[1]/tbody/tr[1]/td/i
+${css_editSenderbtn}						//div/div/div[4]/div/div[5]/div/div[2]/table[1]/tbody/tr[1]/td/i
 
-${css_editSenderAddress}					//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/textarea
+
+${css_editSenderAddress}					//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/textarea
 ${editSenderAddress}							10/0095 Soi Sukhumvit 13 (Sang Chan), Khlong Toei Nuea, Watthana, Bangkok 10110, Bangkok
-${css_editSenderNote}							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[2]/textarea
+${css_editSenderNote}							//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[1]/div[2]/textarea
 ${editSenderNote}									Test
 # ${css_editSenderCity}							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[2]/div[1]/div/div/div[1]
 # ${editSenderCity}									อ่างทอง
-${css_editSenderSavebtn} 							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[1]
-${css_editSenderCanclebtn} 						//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[2]
+${css_editSenderSavebtn} 							//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[1]
+${css_editSenderCanclebtn} 						//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[2]
 
 
-
-
-
-
-${css_editRECIPIENTbtn}						//div/div/div[3]/div/div[5]/div/div[2]/table[2]/tbody/tr[1]/td/i
-
-${css_editRECIPIENTAddress}					//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/textarea
-${editRECIPIENTAddress}							10/0095 Soi Sukhumvit 13 (Sang Chan), Khlong Toei Nuea, Watthana, Bangkok 10110, Bangkok
-${css_editRECIPIENTNote}							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[1]/div[2]/textarea
-${editRECIPIENTNote}									Test
-${css_editRECIPIENTSavebtn} 							//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[1]
-${css_editRECIPIENTCanclebtn} 						//div/div/div[3]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[2]
-
-
-
-
-
-
-
+${css_editRECIPIENTbtn}								//div/div/div[4]/div/div[5]/div/div[2]/table[2]/tbody/tr[1]/td/i
+${css_editRECIPIENTName}							//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[1]/div[1]/input
+${css_RECIPIENTName}									คุณบรรณสิทธิ์ ปานฝึกดีมาก
+${css_editRECIPIENTPhone}							//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[1]/div[2]/input
+${css_RECIPIENTPhone}									0998453229
+${css_editRECIPIENTAddress}						//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[2]/div[1]/div[1]/textarea
+${css_RECIPIENTAddress}								144 ถนนวงแหวนรอบ 2 ตำบลสันกลาง อำเภอสันกำแพง เชียงใหม่ 50130, เชียงใหม่
+${css_editRECIPIENTNote}							//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[2]/div[1]/div[2]/textarea
+${css_RECIPIENTNote}									Test
+${css_editRECIPIENTCitybtn}						//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[2]/div[2]/div[1]/div/div/span/span
+${css_RECIPIENTCity}									//*[contains(text(),'ชลบุรี')]
+${css_editRECIPIENTPostcodebtn}				//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[2]/div[2]/div[2]/div/div/span/span
+${css_RECIPIENTPostcode}							//*[contains(text(),'20000')]
+${css_editRECIPIENTDistrictbtn}				//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[2]/div[2]/div[3]/div/div/span/span
+${css_RECIPIENTDistrict}							//*[contains(text(),'เมือง')]
+${css_editRECIPIENTSub-Districtbtn}		//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[2]/div[2]/div[4]/div/div/span/span
+${css_RECIPIENTSub-District}					//*[contains(text(),'เมือง')]
+${css_editRECIPIENTSavebtn} 					//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[1]
+${css_editRECIPIENTCanclebtn} 				//div/div/div[4]/div/div[5]/div/div[2]/div[3]/div[3]/div/button[2]
 
 
 *** Keywords ***
@@ -125,6 +134,9 @@ search by Status View
 	Click element    						            ${Customer}
 	Wait Until Element Is Visible 			    ${css_startDatebtn}		  		5s
 	Click element    						            ${css_startDatebtn}
+	Wait Until Element Is Visible 			    ${backDatebtn}		  		5s
+	Click element    						            ${backDatebtn}
+	Sleep    10s
 	Wait Until Element Is Visible 			    ${startDate}		  		5s
 	Click element    						            ${startDate}
 	Wait Until Element Is Visible 			    ${LastDate}		  		5s
@@ -136,9 +148,6 @@ search by Status View
 	Wait Until Element Is Visible 			    ${css_REFRESHbtn}			  		5s
 	Click element    						            ${css_REFRESHbtn}
 
-
-
-
 search by Set View
 	Wait Until Element Is Visible 			    ${css_SetViewbtn}	  		5s
 	Click element    						            ${css_SetViewbtn}
@@ -148,22 +157,31 @@ search by Set View
 	Click element    						            ${Customer}
 	Wait Until Element Is Visible 			    ${css_startDatebtn}		  		5s
 	Click element    						            ${css_startDatebtn}
+	Sleep    10s
+	Wait Until Element Is Visible 			    ${backDatebtn}		  		5s
+	Click element    						            ${backDatebtn}
+	Sleep    10s
 	Wait Until Element Is Visible 			    ${startDate}		  		5s
 	Click element    						            ${startDate}
+	Sleep    10s
 	Wait Until Element Is Visible 			    ${LastDate}		  		5s
 	Click element    						            ${LastDate}
 	# Wait Until Element Is Visible 			    ${css_ParcelSizebtn}		  		5s
 	# Click element    						            ${css_ParcelSizebtn}
 	# Wait Until Element Is Visible 			    ${ParcelSize}			  		5s
 	# Click element    						            ${ParcelSize}
-	Wait Until Element Is Visible 			    ${css_Statusbtn}			  		5s
-	Click element    						            ${css_Statusbtn}
-	Wait Until Element Is Visible 			    ${Status}			  		5s
-	Click element    						            ${Status}
-	Wait Until Element Is Visible 			    ${css_Bagbtn}		  		5s
-	Click element    						            ${css_Bagbtn}
-	Wait Until Element Is Visible 			    ${Bag}		  		5s
-	Click element    						            ${Bag}
+	# Wait Until Element Is Visible 			    ${css_Statusbtn}			  		5s
+	# Click element    						            ${css_Statusbtn}
+	# Wait Until Element Is Visible 			    ${Status}			  		5s
+	# Click element    						            ${Status}
+	# Wait Until Element Is Visible 			    ${css_Bagbtn}		  		5s
+	# Click element    						            ${css_Bagbtn}
+	# Wait Until Element Is Visible 			    ${Bag}		  		5s
+	# Click element    						            ${Bag}
+
+	Wait Until Element Is Visible 			    ${css_Set569btn}		  		5s
+	Click element    						            ${css_Set569btn}
+	Sleep    10s
 	Wait Until Element Is Visible 			    ${css_REFRESHbtn}			  		5s
 	Click element    						            ${css_REFRESHbtn}
 
@@ -207,7 +225,6 @@ Edit
 		Wait Until Element Is Visible 			    ${css_editbtn}		  		5s
 		Click element  													${css_editbtn}
 
-
 Edit 1
 		Wait Until Element Is Visible 			    ${css_edit1btn}		  		5s
 		Click element  													${css_edit1btn}
@@ -222,7 +239,6 @@ Edit 1
 		Wait Until Element Is Visible 			    ${css_edit1Savebtn}			  		5s
 		Click element  													${css_edit1Savebtn}
 
-
 Edit SENDER
 		Wait Until Element Is Visible 			    ${css_editSenderbtn}			  		5s
 		Click element  													${css_editSenderbtn}
@@ -231,18 +247,17 @@ Edit SENDER
 		Click element  													${css_editSenderAddress}
 		Input Text    													${css_editSenderAddress}				${editSenderAddress}
 		Wait Until Element Is Visible 			    ${css_editSenderNote}			  		5s
+		Sleep    5s
 		Click element  													${css_editSenderNote}
+		Sleep    5s
 		Input Text  														${css_editSenderNote}			    ${editSenderNote}
 		# Wait Until Element Is Visible 			    ${css_editSenderCity}			  		5s
 		# Click element  													${css_editSenderCity}
 		# Input Text    													${css_editSenderCity}			    ${editSenderCity}
+		Sleep    5s
 		Wait Until Element Is Visible 			    ${css_editSenderSavebtn}			  		5s
 		Click element  													${css_editSenderSavebtn}
-
-
 		Sleep    5s
-
-
 		Wait Until Element Is Visible 			    ${css_editSenderbtn}			  		5s
 		Click element  													${css_editSenderbtn}
 		Sleep    5s
@@ -260,20 +275,61 @@ Edit SENDER
 		Click element  													${css_editSenderCanclebtn}
 
 Edit RECIPIENT
-
-
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTbtn}			  		5s
+	Click element  													${css_editRECIPIENTbtn}
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTName}			  		5s
+	Click element  													${css_editRECIPIENTName}
+	Input Text    													${css_editRECIPIENTName}						${css_RECIPIENTName}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTPhone}				  		5s
+	Click element  													${css_editRECIPIENTPhone}
+	Input Text    													${css_editRECIPIENTPhone}						${css_RECIPIENTPhone}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTAddress}				  		5s
+	Click element  													${css_editRECIPIENTAddress}
+	Input Text    													${css_editRECIPIENTAddress}						${css_RECIPIENTAddress}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTNote}				  		5s
+	Click element  													${css_editRECIPIENTNote}
+	Input Text    													${css_editRECIPIENTNote}					${css_RECIPIENTNote}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTCitybtn}					  		5s
+	Click element  													${css_editRECIPIENTCitybtn}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_RECIPIENTCity}				  		5s
+	Click element  													${css_RECIPIENTCity}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTPostcodebtn}					  		5s
+	Click element  													${css_editRECIPIENTPostcodebtn}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_RECIPIENTPostcode}				  		5s
+	Click element  													${css_RECIPIENTPostcode}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTDistrictbtn}				  		5s
+	Click element  													${css_editRECIPIENTDistrictbtn}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_RECIPIENTDistrict}				  		5s
+	Click element  													${css_RECIPIENTDistrict}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTSub-Districtbtn}				  		5s
+	Click element  													${css_editRECIPIENTSub-Districtbtn}
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_RECIPIENTSub-District}				  		5s
+	Click element  													${css_RECIPIENTSub-District}
+	Wait Until Element Is Visible 			    ${css_editRECIPIENTSavebtn} 				  		5s
+	Click element  													${css_editRECIPIENTSavebtn}
 
 *** Test Cases ***
-# 2Stage website Active Delivery
+# 2Stage website Active Delivery search by Set View
 #       Login to 2Stage by						${admin_username}				${admin_password}
 #       Go to Active Delivery page
 # 			search by Set View
-
-# 2Stage website Active Delivery
+#
+# 2Stage website Active Delivery search by Status View
 # 			Login to 2Stage by						${admin_username}				${admin_password}
 # 			Go to Active Delivery page
 # 			search by Status View
-
+#
 # 2Stage website Active Delivery : Action Menu
 # 						Login to 2Stage by						${admin_username}				${admin_password}
 # 						Go to Active Delivery page
@@ -286,10 +342,13 @@ Edit RECIPIENT
 # 						Customize columns
 # 						View click link
 
-
 2Stage website Active Delivery : Edit
 						Login to 2Stage by						${admin_username}				${admin_password}
 						Go to Active Delivery page
 						search by Status View
+						Sleep    5s
 						Edit
+						Sleep    5s
+						Edit 1
 						Edit SENDER
+						Edit RECIPIENT

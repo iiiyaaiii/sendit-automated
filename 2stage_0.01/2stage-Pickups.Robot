@@ -26,10 +26,10 @@ ${css_Customer}								//*[contains(text(),'7-11 to shop')]
 #${css_Customer}								//*[contains(text(),'Lazada')]
 ${css_ShopSelect}							//div[4]/div/div/div/div/form/div[3]/div/div/div[1]
 #${css_Shop}										//*[contains(text(),'โรงอาหารกลาง มธ.')]
-#${css_Shop}										//*[contains(text(),'MIDTOWN (อโศก)')]
-#${css_Shop}										//*[contains(text(),'ม.นักกีฬา จุด 4')]
-#${css_Shop}										//*[contains(text(),'Eve and Boy')]
-${css_Shop}										//*[contains(text(),'กิ่งแก้ว 43')]
+# ${css_Shop}										//*[contains(text(),'MIDTOWN (อโศก)')]
+# ${css_Shop}										//*[contains(text(),'ม.นักกีฬา จุด 4')]
+# ${css_Shop}										//*[contains(text(),'กิ่งแก้ว 43')]
+${css_Shop}										//*[contains(text(),'รามคำแหง 33')]
 ${css_CustomerNumberofitems}						//div[4]/div/div/div/div/form/div[4]/input
 ${css_CreateNewRequestbtn}							//div[4]/div/div/div/div/form/div[5]/button/span
 
@@ -128,20 +128,23 @@ Action Assing
 
 
 *** Test Cases ***
-# 2Stage website Pickups New Request
-#       Login to 2Stage by						${admin_username}				${admin_password}
-#       Go to Pickups page
-# 			New Request
+2Stage website Pickups New Request
+      Login to 2Stage by						${admin_username}				${admin_password}
+      Go to Pickups page
+			New Request
 
 # 2Stage website Pickups fillter
 # 			Login to 2Stage by						${admin_username}				${admin_password}
 # 			Go to Pickups page
 # 			fillter
 
-
 2Stage website Pickups Action Assing
 						Login to 2Stage by						${admin_username}				${admin_password}
 						Go to Pickups page
-						#fillter
-						# Action Assing
-						Action cancle
+						fillter
+						Action Assing
+
+# 2Stage website Pickups Action Assing
+# 						Login to 2Stage by						${admin_username}				${admin_password}
+# 						Go to Pickups page
+# 						Action cancle

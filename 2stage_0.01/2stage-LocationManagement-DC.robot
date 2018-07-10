@@ -39,44 +39,44 @@ ${css_inputDCAddress}						//div/div/div[3]/div/div[3]/div/div[2]/textarea
 
 
 #Data For test Create
-${DCName}								DC Sukhumvit 26
+${DCName}									DC Sukhumvit 25
 ${DCAddress}							Richmond Office Building Soi Sukhumvit 26 Khwaeng Khongton Khet Khongtei Bangkok 10110 (Test Create)
 
 
 #Data For test Edit
-${DCNameEdit}								DC Sukhumvit Richmond Office
+${DCNameEdit}									DC Sukhumvit Richmond Office
 ${DCAddressEdit}							Richmond Office Building Soi Sukhumvit 26 Khwaeng Khongton Khet Khongtei Bangkok 10110 (Test Edit)
 
 
-${css_CreateSAVEbtn}						//div/div/div[3]/div/div[3]/div/div[3]/button[1]
+${css_CreateSAVEbtn}							//div/div/div[3]/div/div[3]/div/div[3]/button[1]
 ${css_CreateCANCLEbtn}						//div/div/div[3]/div/div[3]/div/div[3]/button[2]/span
 
 
-${css_SelecetDCForEdit}						//*[contains(text(),'DC Sukhumvit 26')]
-${css_Editbtn}								//div/div/div[3]/div/div[3]/div/button
+${css_SelecetDCForEdit}							//*[contains(text(),'DC Sukhumvit 26')]
+${css_Editbtn}											//div/div/div[3]/div/div[3]/div/button
 ${css_EditDisable_Enablebtn}				//div/div/div[3]/div/div[3]/div/div[3]/div/div[2]
 
 
 
 *** Keywords ***
 Login to 2Stage by		[Arguments]			${username}					${password}
-	Open Browser							${url_login}					chrome
+	Open Browser										${url_login}					chrome
 	Maximize Browser Window
 	Element Should Be Visible				${css_login_modal}				10s
-	Input Text								${css_username}					${username}
-	Input Text								${css_password}					${password}
+	Input Text											${css_username}					${username}
+	Input Text											${css_password}					${password}
 	Sleep  3s
-	Click element  							${css_loginbtn}
+	Click element  									${css_loginbtn}
 	Sleep  1s
 Go to Location Management page
 	Wait Until Element Is Visible 			${css_LocationManagementbtn}		5s
-	Click element    						${css_LocationManagementbtn}
+	Click element    										${css_LocationManagementbtn}
 
 select DC
 	Wait Until Element Is Visible 			${css_inputSearchLocationManagement}		5s
-	Click element    						${css_inputSearchLocationManagement}
+	Click element    										${css_inputSearchLocationManagement}
 	Wait Until Element Is Visible 			${css_DCbtn}		5s
-	Click element    						${css_DCbtn}
+	Click element    										${css_DCbtn}
 
 
 
@@ -85,17 +85,17 @@ select DC
 
 Create
 	Wait Until Element Is Visible 			${css_CreateNewbtn}		5s
-	Click element    						${css_CreateNewbtn}
+	Click element    										${css_CreateNewbtn}
 
 Create Input Data
 	#DCName
 	Wait Until Element Is Visible 			${css_inputDCName}		5s
-	Click element    						${css_inputDCName}
-	Input Text 								${css_inputDCName}			${DCName}
+	Click element    										${css_inputDCName}
+	Input Text 													${css_inputDCName}			${DCName}
 	#DCAddress
 	Wait Until Element Is Visible 			${css_inputDCAddress}		5s
-	Click element    						${css_inputDCAddress}
-	Input Text 								${css_inputDCAddress}			${DCAddress}
+	Click element    										${css_inputDCAddress}
+	Input Text 													${css_inputDCAddress}			${DCAddress}
 
 
 
@@ -145,92 +145,81 @@ SAVE btn
 
 Search Location Management
 	Wait Until Element Is Visible 			${css_DCbtn}		5s
-	Click element    						${css_DCbtn}
+	Click element    										${css_DCbtn}
 
 Search Location Management DC Status All
 	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
+	Click element    										${css_Statusbtn}
 	Wait Until Element Is Visible 			${css_StatusAllbtn}		5s
-	Click element    						${css_StatusAllbtn}
+	Click element    										${css_StatusAllbtn}
 	Wait Until Element Is Visible 			${css_inputSearch}		5s
-	Click element    						${css_inputSearch}
+	Click element    										${css_inputSearch}
 
 Search Location Management DC Status Active
 	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
+	Click element    										${css_Statusbtn}
 	Wait Until Element Is Visible 			${css_StatusActivebtn}		5s
-	Click element    						${css_StatusActivebtn}
+	Click element    										${css_StatusActivebtn}
 
 Search Location Management DC Status Inactive
 	Wait Until Element Is Visible 			${css_Statusbtn}		5s
-	Click element    						${css_Statusbtn}
+	Click element    										${css_Statusbtn}
 	Wait Until Element Is Visible 			${css_Statusinactivebtn}		5s
-	Click element    						${css_Statusinactivebtn}
-
-
-
-
-
-
-
-
-
-
-
+	Click element    										${css_Statusinactivebtn}
 
 
 
 *** Test Cases ***
-# 2Stage website Create CANCLE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select DC
-# 	Create
-# 	Create Input Data
-# 	CANCLE btn
+2Stage website Create CANCLE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select DC
+	Create
+	Create Input Data
+	CANCLE btn
 
-# 2Stage website Create SAVE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select DC
-# 	Create
-# 	Create Input Data
-# 	SAVE btn
+2Stage website Create SAVE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select DC
+	Create
+	Create Input Data
+	SAVE btn
 
 
-# 2Stage website Search DC all
-# 	Login to 2Stage by						${admin_username}		${admin_password}
-# 	Go to Location Management page
-# 	Search Location Management
-# 	Search Location Management DC Status All
+2Stage website Search DC all
+	Login to 2Stage by						${admin_username}		${admin_password}
+	Go to Location Management page
+	Search Location Management
+	Search Location Management DC Status All
 
-# 2Stage website Search DC Active
-# 	Login to 2Stage by						${admin_username}		${admin_password}
-# 	Go to Location Management page
-# 	Search Location Management
-# 	Search Location Management DC Status Active
+2Stage website Search DC Active
+	Login to 2Stage by						${admin_username}		${admin_password}
+	Go to Location Management page
+	Search Location Management
+	Search Location Management DC Status Active
 
-# 2Stage website Search DC Inactive
-# 	Login to 2Stage by						${admin_username}		${admin_password}
-# 	Go to Location Management page
-# 	Search Location Management
-# 	Search Location Management DC Status Inactive
+2Stage website Search DC Inactive
+	Login to 2Stage by						${admin_username}		${admin_password}
+	Go to Location Management page
+	Search Location Management
+	Search Location Management DC Status Inactive
 
-# 2Stage website Edit CANCLE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select DC
-# 	select DC for edit
-# 	Edit Input Data
-# 	CANCLE btn
+2Stage website Edit CANCLE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select DC
+	select DC for edit
+	Edit Input Data
+	CANCLE btn
 
-# 2Stage website Edit SAVE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select DC
-# 	select DC for edit
-# 	Edit Input Data
-# 	SAVE btn
+2Stage website Edit SAVE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select DC
+	select DC for edit
+	Edit Input Data
+	SAVE btn
 
 2Stage website Edit DISABLE btn
 	Login to 2Stage by						${admin_username}				${admin_password}
@@ -240,10 +229,10 @@ Search Location Management DC Status Inactive
 	Edit disable
 	SAVE btn
 
-# 2Stage website Edit ENABLE btn
-# 	Login to 2Stage by						${admin_username}				${admin_password}
-# 	Go to Location Management page
-# 	select DC
-# 	select DC for edit
-# 	Edit enable
-# 	SAVE btn
+2Stage website Edit ENABLE btn
+	Login to 2Stage by						${admin_username}				${admin_password}
+	Go to Location Management page
+	select DC
+	select DC for edit
+	Edit enable
+	SAVE btn

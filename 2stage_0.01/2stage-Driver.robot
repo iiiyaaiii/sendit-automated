@@ -275,41 +275,41 @@ Delete Driver ACCEPT btn
   Go to Driver page
 	Search Driver
 
-# 2Stage website New Driver
-# 	  Login to 2Stage by						${admin_username}				${admin_password}
-# 	  Go to Driver page
-# 		New Driver
-# 		New Driver CANCLE btn
-# 		New Driver
-# 		New Driver Create btn
+2Stage website New Driver
+	  Login to 2Stage by						${admin_username}				${admin_password}
+	  Go to Driver page
+		New Driver
+		New Driver CANCLE btn
+		New Driver
+		New Driver Create btn
 
-# 2Stage website Edit Driver
-# 		Login to 2Stage by						${admin_username}				${admin_password}
-# 		Go to Driver page
-# 		Search Driver
-# 		Sleep    5s
-# 		Edit Driver
-# 		New Driver CANCLE btn
-# 		Search Driver
-# 		Sleep    5s
-# 		Edit Driver
-# 		New Driver Create btn
-
-
-
-# 2Stage website reset Password
-# 				Login to 2Stage by						${admin_username}				${admin_password}
-# 				Go to Driver page
-# 				Search Driver
-# 				Reset password
-# 				Reset password CANCLE btn
-# 				Reset password
-# 				Reset password Change btn
+2Stage website Edit Driver
+		Login to 2Stage by						${admin_username}				${admin_password}
+		Go to Driver page
+		Search Driver
+		Sleep    5s
+		Edit Driver
+		New Driver CANCLE btn
+		Search Driver
+		Sleep    5s
+		Edit Driver
+		New Driver Create btn
 
 
-# 2Stage website reset Password
-# 				Login to 2Stage by						${admin_username}				${admin_password}
-# 				Go to Driver page
-# 				Search Driver
-# 				Delete Driver
-# 				Delete Driver ACCEPT btn
+
+2Stage website reset Password
+				Login to 2Stage by						${admin_username}				${admin_password}
+				Go to Driver page
+				Search Driver
+				Reset password
+				Reset password CANCLE btn
+				Reset password
+				Reset password Change btn
+
+
+2Stage website reset Password
+				Login to 2Stage by						${admin_username}				${admin_password}
+				Go to Driver page
+				Search Driver
+				Delete Driver
+				Delete Driver ACCEPT btn
