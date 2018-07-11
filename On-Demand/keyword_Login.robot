@@ -28,3 +28,8 @@ Error message should be 				[Arguments]			${element}			${error_message}
 	Wait Until Element Is Visible				${element}				10s
 	${message} = 			Get Text			${element}
 	Should Be Equal			${message}			${error_message}
+
+Success message should be 				[Arguments]			${element}			${error_message}
+	Wait Until Element Is Visible				${element}				10s
+	${message} = 			Get Text			${element}
+	Should Be Equal			${message}			${error_message}

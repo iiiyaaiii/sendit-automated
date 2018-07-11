@@ -64,6 +64,11 @@ ${bookmark_item_name}       css=.bookmarkPicker h4
 ${usethis_bookmark}         css=.useThis
 ${input_bookmark_name}      css=input[placeholder="Name of this bookmark"]
 ${cancel_bookmark}          css=div.cancel
+${delete_bookmark}          css=.glyphicon-remove
+${input_del_bookmark}       css=Input[placeholder="Bookmark name"]
+${alert_warning}            css=div.alert-warning
+${pickup_bookmark_name}     Sendit Richmond Office
+${dropoff_bookmark_name}    AIA Ascend
 
 #Dropoff
 ${dropoff1_location}        css=input[placeholder="Dropoff1 Location"]
