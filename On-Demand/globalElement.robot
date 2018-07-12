@@ -69,6 +69,7 @@ ${input_del_bookmark}       css=Input[placeholder="Bookmark name"]
 ${alert_warning}            css=div.alert-warning
 ${pickup_bookmark_name}     Sendit Richmond Office
 ${dropoff_bookmark_name}    AIA Ascend
+${bookmark_element_item}    //*[@id="page-top"]/div[4]/div/div/div/div[2]/div[1]
 
 #Dropoff
 ${dropoff1_location}        css=input[placeholder="Dropoff1 Location"]
@@ -140,3 +141,6 @@ ${bookmark_star_pickup}     $('.bookmark.glyphicon-star-empty')[0]
 ${bookmark_star_dropoff}    $('.bookmark.glyphicon-star-empty')[1]
 ${summary_pickup_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/h4/div
 ${summary_dropoff_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/h4/div
+
+#Payment
+${payment_modal}            css=div.payment

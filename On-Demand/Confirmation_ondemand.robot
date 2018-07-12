@@ -44,6 +44,8 @@ Submit parcel successful and display summary
 Add pickup address to bookmark successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
+  Sleep  10s
+  Clear all bookmarks
   Create Pickup location					${user_address}
   Set pickup date next month
   Set pickup time					15				20
@@ -63,16 +65,21 @@ Add pickup address to bookmark successful
   Sleep  2s
   Use this address
   Click Element                    ${done_btn}
-  Sleep  5s
+  Sleep  10s
   Click Element    				         ${submit_pickup}
   Sleep  5s
   Click Element                    ${complete_parcel_next_btn}
   Element Should Be Visible        ${confirmation_modal}
   Check bookmark address display in summary     ${summary_pickup_addr}     ${user_address}
+  Sleep  2s
+  Click tab                        PICKUP
+  Clear all bookmarks
 
 Add dropoff address to bookmark successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
+  Sleep  10s
+  Clear all bookmarks
   Create Pickup location					${user_address}
   Set pickup date next month
   Set pickup time					15				20
@@ -97,16 +104,18 @@ Add dropoff address to bookmark successful
   Sleep  5s
   Element Should Be Visible        ${confirmation_modal}
   Check bookmark address display in summary     ${summary_dropoff_addr}     ${dropoff2_address}
+  Click tab                        PICKUP
+  Clear all bookmarks
 
 Search bookmark successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
+  Sleep  10s
+  Clear all bookmarks
   Create Pickup location					${user_address}
   Set pickup date next month
   Set pickup time					11				30
   Complete sender details
-  Clear all bookmarks
-  Sleep  5s
   Click Element    				${submit_pickup}
   Sleep  2s
   Set Dropoff location             ${dropoff1_location}       ${dropoff4_address}
@@ -131,12 +140,17 @@ Search bookmark successful
   Check bookmark item              2              ${dropoff4_address}
   Sleep  3s
   Search bookmark                  ${dropoff4_address}
+  Sleep  5s
   Click Element                    ${cancel_bookmark}
+  Sleep  5s
+  Click tab                        PICKUP
   Clear all bookmarks
 
 Delete bookmark fail input incorrect bookmark name
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
+  Sleep  10s
+  Clear all bookmarks
   Create Pickup location					${user_address}
   Set pickup date next month
   Set pickup time					11				30
@@ -161,6 +175,8 @@ Delete bookmark fail input incorrect bookmark name
 Delete bookmark successful
   Open Ondemand website
   Login to Ondemand			   ${username}				${password}
+  Sleep  10s
+  Clear all bookmarks
   Create Pickup location					${user_address}
   Set pickup date next month
   Set pickup time					11				30

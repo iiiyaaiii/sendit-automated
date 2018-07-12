@@ -62,7 +62,7 @@ Bookmark address         [Arguments]        ${tab}       ${bookmark_star_element
   Input Text                       ${input_bookmark_name}     ${bookmark_name}
   Click Element                    ${done_btn}
   Sleep  3s
-  CLick tab                        ${tab}
+  Click tab                        ${tab}
   Sleep  5s
   ${bookmark_item} =          Run Keyword And Return Status         Should Be Equal    ${tab}     PICKUP
   Run Keyword If        ${bookmark_item} == True       Click Element      ${pickup_bookmark}
@@ -71,7 +71,7 @@ Bookmark address         [Arguments]        ${tab}       ${bookmark_star_element
 Check bookmark item         [Arguments]     ${item_no}      ${bookmark_name}
   Element Should Be Visible       ${bookmark_modal}
   Sleep  10s
-  ${bookmark_address} =           Get Text                    //*[@id="page-top"]/div[4]/div/div/div/div[2]/div[1]/div[${item_no}]/h4
+  ${bookmark_address} =           Get Text                    ${bookmark_element_item}/div[${item_no}]/h4
   Should Be Equal                 ${bookmark_address}         ${bookmark_name}
 
 Use this address
@@ -86,7 +86,6 @@ Search bookmark         [Arguments]       ${bookmark_name}
   Should Be Equal                 ${bookmark_address}         ${bookmark_name}
 
 Check bookmark address display in summary       [Arguments]         ${element}        ${bookmark_address}
-
   ${summary_address} =            Get Text        ${element}
   Should Contain                  ${summary_address}        ${bookmark_address}
 
@@ -110,4 +109,5 @@ Clear all bookmarks
   \  ${i} =  Set Variable		${i+1}
 	\  Run Keyword If 				${i} > ${length}			Exit For Loop
   \  Sleep  5s
-  Click Element                    ${cancel_bookmark}
+  Sleep  10s
+  Click Element            ${cancel_bookmark}
