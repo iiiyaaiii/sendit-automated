@@ -3,32 +3,33 @@ Library					Selenium2Library
 Suite Setup
 
 
+#################################################################################
 *** Variables ***
 ${url_login}								https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							admin@sendit.asia
-${admin_password}							12345678
+${admin_username}							test_admin@sendit.asia
+${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}					https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
 ${css_login_modal}						css=div.login-container__loginform___2rEJe
 ${css_username}								//div[1]/div/div/div/div[1]/input
 ${css_password}								//div[1]/div/div/div/div[2]/input
 ${css_loginbtn}								//div[1]/div/div/div/div[3]/button
+
+#################################################################################
 #Go to Driver Page
 ${css_Driverbtn}              //div/div/div[2]/ul/li[12]/a/i
+#################################################################################
 #search Driver
 ${css_searchDriver}  					//div/div/div[3]/div/div[1]/div[2]/div/input
-
-
 #New Driver btn
 ${css_NewDriverbtn}						//div/div/div[3]/div/div[1]/div[1]/a/span
 #Edit Driver btn
 ${css_editDriverbtn}					//div/div/div[3]/div/div[3]/div/div/div/div/div[3]/div/div/div/div[2]/div/div[10]/div/div/div/div/a/button/span
 #Delete Driver btn
-${css_DeleteDriverbtn}					//div/div/div[3]/div/div[3]/div/div/div/div/div[3]/div/div/div/div[2]/div/div[11]/div/div/div/div/button/span
+${css_DeleteDriverbtn}				//div/div/div[3]/div/div[3]/div/div/div/div/div[3]/div/div/div/div[2]/div/div[11]/div/div/div/div/button/span
 #Reset Driver btn
 ${css_resetDriverbtn}					//div/div/div[3]/div/div[3]/div/div/div/div/div[3]/div/div/div/div[2]/div/div[12]/div/div/div/div/button/span
-
-
+#################################################################################
 #PERSONAL INFO Data
 ${css_DrivernameTH}								//div/div/div[3]/div/div[3]/div[1]/form/div[1]/div[1]/div/input
 ${css_DriverlastTH}								//div/div/div[3]/div/div[3]/div[1]/form/div[1]/div[2]/div/input
@@ -43,27 +44,28 @@ ${css_Driverbirthday_Month}						//*[contains(text(),'February')]
 ${css_Driverbirthday_Yearbtn}					//div/div/div[3]/div/div[3]/div[1]/form/div[5]/div[1]/div/div[1]/div/div[2]/div/div[2]/div[1]/div[2]/div[2]/select
 ${css_Driverbirthday_Year}						//*[contains(text(),'1991')]
 # ${css_Driverbirthday_Daybtn}					//div/div/div[3]/div/div[3]/div[1]/form/div[5]/div[1]/div/div[1]/div/div[2]/div/div[2]
-${css_Driverbirthday_Day}						//div/div/div[3]/div/div[3]/div[1]/form/div[5]/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]/div[1]/div[7]
+${css_Driverbirthday_Day}							//div/div/div[3]/div/div[3]/div[1]/form/div[5]/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]/div[1]/div[7]
+${css_DrivercitizenId}								//div/div/div[3]/div/div[3]/div[1]/form/div[5]/div[2]/div/input
+${css_DriverPhone}										//div/div/div[3]/div/div[3]/div[1]/form/div[6]/div[1]/div/input
+${css_DriversendidPhone}							//div/div/div[3]/div/div[3]/div[1]/form/div[6]/div[2]/div/input
+${css_COURIERbtn}											//div/div/div[3]/div/div[3]/div[2]/div/div[1]/div/div[2]/div/div/div[1]
+${css_COURIER}												//*[contains(text(),'DHL')]
 
-${css_DrivercitizenId}						//div/div/div[3]/div/div[3]/div[1]/form/div[5]/div[2]/div/input
-${css_DriverPhone}								//div/div/div[3]/div/div[3]/div[1]/form/div[6]/div[1]/div/input
-${css_DriversendidPhone}					//div/div/div[3]/div/div[3]/div[1]/form/div[6]/div[2]/div/input
-${css_COURIERbtn}								//div/div/div[3]/div/div[3]/div[2]/div/div[1]/div/div[2]/div/div/div[1]
-${css_COURIER}										//*[contains(text(),'DHL')]
 
 
+
+#################################################################################
 #PERSONAL INFO Data New Driver
-${DrivernameTH}								อันนา
-${DriverlastTH}								ณ ทองหล่อ
-${DrivernicknameTH}						นานา
-${DrivernameENG}							anna
-${DriverlastENG}							Na thonglor
-${DrivernicknameENG}					nana
-${DrivercitizenId}						1222664444122
-${DriverPhone}								09898622220
-${DriversendidPhone}					09892222222
-
-
+${DrivernameTH}								ปรีชา
+${DriverlastTH}								ทองดี
+${DrivernicknameTH}						เจมส์
+${DrivernameENG}							Pecha
+${DriverlastENG}							Thong
+${DrivernicknameENG}					Jame
+${DrivercitizenId}						7281004441137
+${DriverPhone}								09333622111
+${DriversendidPhone}					09333222966
+#################################################################################
 #PERSONAL INFO Data New Driver Edit
 ${DrivernameTHedit}								อันนา
 ${DriverlastTHedit}								ณ สีลม
@@ -71,20 +73,21 @@ ${DrivernicknameTHedit}						นานา
 ${DrivernameENGedit}							anna
 ${DriverlastENGedit}							Na silom
 ${DrivernicknameENGedit}					nana
-${DrivercitizenIdedit}						1222664444122
+${DrivercitizenIdedit}						7289175611001
 ${DriverPhoneedit}								09898622220
 ${DriversendidPhoneedit}					09892222222
-
-
-${css_Createbtn} 						//div/div/div[3]/div/div[4]/div/div[2]/button
-${css_Canclebtn} 					//div/div/div[3]/div/div[4]/div/div[1]/button
-
+#################################################################################
+${css_Createbtn} 												//div/div/div[3]/div/div[4]/div/div[2]/button
+${css_Canclebtn} 												//div/div/div[3]/div/div[4]/div/div[1]/button
+#################################################################################
 #Reset password
 ${css_ResetpasswordCanclebtn} 								//div/div/div[3]/div/div[1]/div/button/i
 ${css_ResetpasswordViewbtn}										//div/div/div[3]/div/div[1]/div/div/div[2]/div[1]/div[2]/i
 ${css_ResetpasswordinputNewPassword}					//div/div/div[3]/div/div[1]/div/div/div[2]/div[1]/div[1]/input
 ${css_ResetpasswordChangebtn}									//div/div/div[3]/div/div[1]/div/div/div[2]/div[2]/button
 ${NewPassword}																12345678
+#################################################################################
+
 
 
 
@@ -98,20 +101,32 @@ Login to 2Stage by		    [Arguments]			${username}					${password}
 	Sleep  3s
 	Click element  							            ${css_loginbtn}
 	Sleep  1s
+
 Go to Driver page
 	# Execute JavaScript    									$('${css_Driverbtn}').click()
 	Wait Until Element Is Visible 			    ${css_Driverbtn}		5s
 	Click element    						            ${css_Driverbtn}
-Search Driver
+
+Search Driver by Name
 	Wait Until Element Is Visible 			    ${css_searchDriver}  		5s
 	Click element    						            ${css_searchDriver}
-	Input Text    													${css_searchDriver}  		${DrivernameTH}
-	Wait Until Element Is Visible 			    ${css_searchDriver}  		5s
 	Sleep    5s
 	Clear Element Text 											${css_searchDriver}
 	Sleep    5s
-	Click element    						            ${css_searchDriver}
-	Input Text   														${css_searchDriver}  		${DrivercitizenId}
+	Input Text    													${css_searchDriver}  		${DrivernameTH}
+	Sleep    5s
+
+Search Driver by CitizenID
+
+		Wait Until Element Is Visible 			    ${css_searchDriver}  		5s
+		Sleep    5s
+		Click element    						            ${css_searchDriver}
+		Sleep    5s
+		Clear Element Text 											${css_searchDriver}
+		Sleep    5s
+		Input Text   														${css_searchDriver}  		${DrivercitizenId}
+		Sleep    5s
+		Press Key    ${css_searchDriver}   \\13
 
 New Driver
 	Wait Until Element Is Visible 			    ${css_NewDriverbtn}	  		5s
@@ -150,8 +165,6 @@ New Driver
 	Wait Until Element Is Visible 			    ${css_Driverbirthday_Day}		   			5s
 	Click element														${css_Driverbirthday_Day}
 
-
-
 	Wait Until Element Is Visible 			    ${css_DrivercitizenId}	   		5s
 	Click element														${css_DrivercitizenId}
 	Input Text   														${css_DrivercitizenId}	 		${DrivercitizenId}
@@ -165,7 +178,6 @@ New Driver
 	Click element														${css_COURIERbtn}
 	Wait Until Element Is Visible 			    ${css_COURIER}		   		5s
 	Click element														${css_COURIER}
-
 
 Edit Driver
 		Wait Until Element Is Visible 			    ${css_editDriverbtn}	  		5s
@@ -204,8 +216,6 @@ Edit Driver
 		Wait Until Element Is Visible 			    ${css_Driverbirthday_Day}		   			5s
 		Click element														${css_Driverbirthday_Day}
 
-
-
 		Wait Until Element Is Visible 			    ${css_DrivercitizenId}	   		5s
 		Click element														${css_DrivercitizenId}
 		Input Text   														${css_DrivercitizenId}	 		${DrivercitizenIdedit}
@@ -220,16 +230,13 @@ Edit Driver
 		Wait Until Element Is Visible 			    ${css_COURIER}		   		5s
 		Click element														${css_COURIER}
 
-
 New Driver CANCLE btn
 		Wait Until Element Is Visible 			 	${css_Canclebtn} 	   		5s
 		Click element													${css_Canclebtn}
 
-
 New Driver Create btn
 		Wait Until Element Is Visible 			  ${css_Createbtn} 	   		5s
 		Click element													${css_Createbtn}
-
 
 Reset password
 		Wait Until Element Is Visible 			 		${css_resetDriverbtn} 	   		5s
@@ -241,16 +248,13 @@ Reset password
 		Click element														${css_ResetpasswordViewbtn}
 		Sleep    10s
 
-
 Reset password CANCLE btn
 		Wait Until Element Is Visible 			 		${css_ResetpasswordCanclebtn} 		   		5s
 		Click element														${css_ResetpasswordCanclebtn}
 
-
 Reset password Change btn
 		Wait Until Element Is Visible 			 		${css_ResetpasswordChangebtn}			   		5s
 		Click element														${css_ResetpasswordChangebtn}
-
 
 Delete Driver
 		Wait Until Element Is Visible 			 		${css_DeleteDriverbtn}			   		5s
@@ -258,10 +262,8 @@ Delete Driver
 		Sleep    3s
 		#Handle Alert									DISMISS			5s
 
-
 Delete Driver CANCLE btn
 		Handle Alert									DISMISS			5s
-
 
 Delete Driver ACCEPT btn
 		Handle Alert									ACCEPT			5s
@@ -269,11 +271,17 @@ Delete Driver ACCEPT btn
 
 
 
+
+
+
+
+
 *** Test Cases ***
-2Stage website Search Driver
-  Login to 2Stage by						${admin_username}				${admin_password}
-  Go to Driver page
-	Search Driver
+# 2Stage website Search Driver
+#   Login to 2Stage by						${admin_username}				${admin_password}
+#   Go to Driver page
+# 	Search Driver by Name
+# 	Search Driver by CitizenID
 
 2Stage website New Driver
 	  Login to 2Stage by						${admin_username}				${admin_password}
@@ -283,33 +291,46 @@ Delete Driver ACCEPT btn
 		New Driver
 		New Driver Create btn
 
-2Stage website Edit Driver
-		Login to 2Stage by						${admin_username}				${admin_password}
-		Go to Driver page
-		Search Driver
-		Sleep    5s
-		Edit Driver
-		New Driver CANCLE btn
-		Search Driver
-		Sleep    5s
-		Edit Driver
-		New Driver Create btn
+# 2Stage website Search Driver
+# 		  Login to 2Stage by						${admin_username}				${admin_password}
+# 		  Go to Driver page
+# 			Search Driver by Name
+# 			Search Driver by CitizenID
 
+# 2Stage website Edit Driver
+# 		Login to 2Stage by						${admin_username}				${admin_password}
+# 		Go to Driver page
+# 		Search Driver by Name
+# 		Sleep    5s
+# 		Edit Driver
+# 		Sleep    5s
+# 		New Driver CANCLE btn
+# 		Sleep    5s
+# 		Search Driver by Name
+# 		Sleep    5s
+# 		Edit Driver
+# 		Sleep    5s
+# 		New Driver Create btn
 
+# 2Stage website reset Password
+# 				Login to 2Stage by						${admin_username}				${admin_password}
+# 				Go to Driver page
+# 				Search Driver by Name
+# 				Sleep    5s
+# 				Reset password
+# 				Sleep    5s
+# 				Reset password CANCLE btn
+# 				Sleep    5s
+# 				Reset password
+# 				Sleep    5s
+# 				Reset password Change btn
 
-2Stage website reset Password
-				Login to 2Stage by						${admin_username}				${admin_password}
-				Go to Driver page
-				Search Driver
-				Reset password
-				Reset password CANCLE btn
-				Reset password
-				Reset password Change btn
-
-
-2Stage website reset Password
-				Login to 2Stage by						${admin_username}				${admin_password}
-				Go to Driver page
-				Search Driver
-				Delete Driver
-				Delete Driver ACCEPT btn
+# 2Stage website Delete Driver
+# 				Login to 2Stage by						${admin_username}				${admin_password}
+# 				Go to Driver page
+# 				Sleep    5s
+# 				Search Driver by Name
+# 				Sleep    5s
+# 				Delete Driver
+# 				Sleep    5s
+# 				Delete Driver ACCEPT btn

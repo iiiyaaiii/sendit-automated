@@ -5,8 +5,8 @@ Suite Setup
 
 *** Variables ***
 ${url_login}								  https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							admin@sendit.asia
-${admin_password}							12345678
+${admin_username}							test_admin@sendit.asia
+${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}		https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
 ${css_login_modal}						css=div.login-container__loginform___2rEJe
@@ -31,7 +31,7 @@ ${Rollbackbtn}													//div/div/div[3]/div/div[1]/div/table/tbody[1]/tr[2]/
 
 *** Keywords ***
 Login to 2Stage by		    [Arguments]			${username}					${password}
-	Open Browser							              ${url_login}					firefox
+	Open Browser							              ${url_login}					chrome
 	Maximize Browser Window
 	Element Should Be Visible				        ${css_login_modal}				5s
 	Input Text								              ${css_username}					${username}
@@ -49,9 +49,9 @@ Browse Customer
 	Input Text    													${css_BrowseCustomer}				${BrowseCustomer}
 	Wait Until Element Is Visible 			    ${Customerbtn}  		5s
 	Click element  													${Customerbtn}
-	Wait Until Element Is Visible    				css=input[type="file"]
-	#Click element  													css=input[type="file"]
-	Choose File    													css=input[type="file"]     C:\Users\MP1CCW3X\Downloads\test.txt
+	# Wait Until Element Is Visible    				//div/div/div[3]/div/div[2]/div[1]/div[2]/div/div/input
+	# Click element  												//div/div/div[3]/div/div[2]/div[1]/div[2]/div/div/input
+	Choose File    													//*[@id="root"]/div/div/div[3]/div/div[2]/div[1]/div[2]/div/div/input 	C:\\Users\\MP1CCW3X\\Downloads\\test.txt
 Download an example file
 	Wait Until Element Is Visible 			    ${Downloadanexamplefilebtn}  		5s
 	Click element  													${Downloadanexamplefilebtn}
@@ -70,7 +70,7 @@ Rollback
 2Stage website Parcel Import
       Login to 2Stage by						${admin_username}				${admin_password}
       Go to Parcel Import page
-			#Browse Customer
+			Browse Customer
 			Download an example file
 			view all
 			Download

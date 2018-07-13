@@ -5,8 +5,8 @@ Suite Setup
 
 *** Variables ***
 ${url_login}								  https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							admin@sendit.asia
-${admin_password}							12345678
+${admin_username}							test_admin@sendit.asia
+${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}		https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
 ${css_login_modal}						css=div.login-container__loginform___2rEJe

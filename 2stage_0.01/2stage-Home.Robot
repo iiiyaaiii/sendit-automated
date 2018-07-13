@@ -5,8 +5,8 @@ Suite Setup
 
 *** Variables ***
 ${url_login}								  https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							admin@sendit.asia
-${admin_password}							12345678
+${admin_username}							test_admin@sendit.asia
+${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}		https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
 ${css_login_modal}						css=div.login-container__loginform___2rEJe
@@ -23,14 +23,14 @@ ${css_ChangePasswordbtn}			//div[1]/div/div/div[1]/div[1]/div/div/div[2]/div[4]/
 ${css_Xbtn}										//div[1]/div/div/div[1]/div[1]/div/button
 
 #Data 1
-${CurrentPassword}						12345678
+${CurrentPassword}						sendit1234
 ${NewPassword}								12341234
 ${ConfirmPassword}						12341234
 
 #Data 2
 ${CurrentPassword2}						12341234
-${NewPassword2}								12345678
-${ConfirmPassword2}						12345678
+${NewPassword2}								sendit1234
+${ConfirmPassword2}						sendit1234
 
 
 *** Keywords ***
@@ -67,7 +67,7 @@ Change Password Save
 		Input Text    												 ${css_ConfirmPassword}				${ConfirmPassword}
 		Wait Until Element Is Visible 			   ${css_ChangePasswordbtn}	      		5s
 		Click element                          ${css_ChangePasswordbtn}
-
+//*[@id="driversPanel"]/table/tbody/tr[1]/td[2]
 Change Password Save Return
 				Wait Until Element Is Visible		css=.globalnav-component__menulist___279ou
 				Mouse Over			css=.globalnav-component__menulist___279ou .globalnav-component__menutext___v7ebC

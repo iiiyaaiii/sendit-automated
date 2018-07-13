@@ -5,7 +5,7 @@ Suite Setup
 
 *** Variables ***
 ${url_login}								  https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							test_admin@sendit.asia
+${admin_username}							test_customer@sendit.asia
 ${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}		https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
@@ -128,10 +128,10 @@ search by Status View
 	Click element    						            ${css_Historybtn}
 	Sleep    5S
 
-	Wait Until Element Is Visible 			    ${css_Customerbtn2}	  		5s
-	Click element    						            ${css_Customerbtn2}
-	Wait Until Element Is Visible 			    ${Customer}	  		5s
-	Click element    						            ${Customer}
+	# Wait Until Element Is Visible 			    ${css_Customerbtn2}	  		5s
+	# Click element    						            ${css_Customerbtn2}
+	# Wait Until Element Is Visible 			    ${Customer}	  		5s
+	# Click element    						            ${Customer}
 	Wait Until Element Is Visible 			    ${css_startDatebtn}		  		5s
 	Click element    						            ${css_startDatebtn}
 	Wait Until Element Is Visible 			    ${backDatebtn}		  		5s
@@ -320,15 +320,15 @@ Edit RECIPIENT
 	Click element  													${css_editRECIPIENTSavebtn}
 
 *** Test Cases ***
-2Stage website Active Delivery search by Set View
-      Login to 2Stage by						${admin_username}				${admin_password}
-      Go to Active Delivery page
-			search by Set View
+# 2Stage website Active Delivery search by Set View
+#       Login to 2Stage by						${admin_username}				${admin_password}
+#       Go to Active Delivery page
+# 			search by Set View
 
-# 2Stage website Active Delivery search by Status View
-# 			Login to 2Stage by						${admin_username}				${admin_password}
-# 			Go to Active Delivery page
-# 			search by Status View
+2Stage website Active Delivery search by Status View
+			Login to 2Stage by						${admin_username}				${admin_password}
+			Go to Active Delivery page
+			search by Status View
 #
 # 2Stage website Active Delivery : Action Menu
 # 						Login to 2Stage by						${admin_username}				${admin_password}
@@ -341,7 +341,7 @@ Edit RECIPIENT
 # 						Action
 # 						Customize columns
 # 						View click link
-
+#
 # 2Stage website Active Delivery : Edit
 # 						Login to 2Stage by						${admin_username}				${admin_password}
 # 						Go to Active Delivery page

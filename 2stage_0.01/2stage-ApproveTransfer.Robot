@@ -5,8 +5,8 @@ Suite Setup
 
 *** Variables ***
 ${url_login}								  https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							admin@sendit.asia
-${admin_password}							12345678
+${admin_username}							test_admin@sendit.asia
+${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}		https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
 ${css_login_modal}						css=div.login-container__loginform___2rEJe
@@ -16,7 +16,7 @@ ${css_loginbtn}								//div[1]/div/div/div/div[3]/button
 #Go to Approve Transfer Page
 ${css_ApproveTransferbtn}          			//div/div/div[2]/ul/li[8]/a/i
 #Search
-${css_Selectedbtn}    									//div/div/div[3]/div/div[1]/button[1]
+${css_Selectedbtn}    				//div/div/div[3]/div/div[1]/button[1]
 ${css_FristDay}               //div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div[3]/div[1]/div[6]
 ${css_LastDay}                //div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div[3]/div[5]/div[5]
 ${css_ClickPrevDay} 					//div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[1]/span[1]
@@ -25,7 +25,6 @@ ${css_Searchbtn}              //div/div/div[3]/div/div[1]/div/button
 
 ${css_SearchStatusApprovebtn}   //div/div/div[3]/div/div[1]/button[2]/span
 ${css_Approvebtn} 							//div/div/div[3]/div/div[2]/div/div[1]/div[3]/div[4]/div/div/div[2]/div/div[11]/div/div/div/div/button
-
 
 
 *** Keywords ***

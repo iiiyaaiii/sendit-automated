@@ -5,8 +5,8 @@ Suite Setup
 
 *** Variables ***
 ${url_login}								  https://staging.customer.sendit.asia/th/2stage/login
-${admin_username}							admin@sendit.asia
-${admin_password}							12345678
+${admin_username}							test_admin@sendit.asia
+${admin_password}							sendit1234
 #element login-home page
 ${url_2stage_activdelivery}		https://staging.customer.sendit.asia/th/2stage/parcels?activeStatusTab=ongoing&currentView
 ${css_login_modal}						css=div.login-container__loginform___2rEJe
@@ -17,7 +17,11 @@ ${css_loginbtn}								//div[1]/div/div/div/div[3]/button
 ${css_Sortingbtn}        			//div/div/div[2]/ul/li[3]/a/i
 #Sorting
 ${css_SortingTypebtn}  					//div/div/div[3]/div/div/div[2]/div/ul/li[68]/span
-${css_Choosefilebtn} 						//div/div/div[3]/div/div/div[3]/form/label
+${css_Choosefilebtn} 						input#document
+${css_Uplodefilebtn} 						//*[@id="root"]/div/div/div[3]/div/div/div[3]/form/button
+
+
+
 
 
 
@@ -37,12 +41,21 @@ Go to Sorting page
 Sorting
 	Wait Until Element Is Visible 			    ${css_SortingTypebtn}    		5s
 	Click element    						           	${css_SortingTypebtn}
-	Wait Until Element Is Visible 			    ${css_Choosefilebtn}   		5s
-	Click Button    						            ${css_Choosefilebtn}
-	# Choose File    													${css_Choosefilebtn}    				C://Users/MP1CCW3X/Downloads/Sorting.xlsx
+	Sleep    3s
+	# Wait Until Element Is Visible 			    ${css_Choosefilebtn}  		5s
+	# Sleep    5s
+	# Click Button    						            ${css_Choosefilebtn}
+	# Choose File    													${css_Choosefilebtn}  				C://Users/MP1CCW3X/Downloads/Sorting.xlsx
+	# Choose File    													${css_Choosefilebtn}  				C://Users/MP1CCW3X/Downloads/test.txt
+	Choose File    													id=document				C:\\Users\\MP1CCW3X\\Desktop\\Sorting.xlsx
+	Sleep    3s
+	Wait Until Element Is Visible 			    ${css_Uplodefilebtn}  		5s
+	Click element  													${css_Uplodefilebtn}
+	
+
 
 *** Test Cases ***
-2Stage website Search Driver
+2Stage website Sorting
       Login to 2Stage by						${admin_username}				${admin_password}
       Go to Sorting page
 			Sorting
