@@ -1,18 +1,6 @@
 *** Variables ***
-${browser}						      chrome
-${url_ondemand_staging}			https://staging-customer.sendit.asia/
-${username}						      Tester1@sendit.asia
-${password}						      12345678
-${defaultuser_name}				  Panuwit S.
-${defaultuser_email}			  tester1@sendit.asia
-${defaultuser_phone}			  022020022
-${defaultuser_address}			Bangkok
+#Login and Settings
 ${user_form}					      css=form[name="userForm"]
-${newpassword}					    new12345
-${settinguser_name}				  Ms.Pitchaya
-${settinguser_email}			  pitchaya_ket@sendit.asia
-${user_phone}					      0929929992
-${user_address}					    Richmond Office Building
 ${error_alertmsg}				    css=div.alert-danger
 ${Login_menu}					      css=.login-menu
 ${Login_modal}					    css=#loginTab
@@ -52,7 +40,6 @@ ${sender_name}              css=#senderContactName
 ${sender_phone}             css=#senderPhoneNumber
 ${sender_email}             css=#senderEmail
 ${sender_comment}           css=textarea[placeholder="Comments(floor, building - Optional)"]
-${user_pickup_comment}      18th floor
 ${dropoff_modal}            css=div.dropoffContainer
 ${parcel_modal}             css=div.parcelContainer
 ${tab_element}              $('.editContent span.ng-binding')
@@ -67,8 +54,6 @@ ${cancel_bookmark}          css=div.cancel
 ${delete_bookmark}          css=.glyphicon-remove
 ${input_del_bookmark}       css=Input[placeholder="Bookmark name"]
 ${alert_warning}            css=div.alert-warning
-${pickup_bookmark_name}     Sendit Richmond Office
-${dropoff_bookmark_name}    AIA Ascend
 ${bookmark_element_item}    //*[@id="page-top"]/div[4]/div/div/div/div[2]/div[1]
 
 #Dropoff
@@ -77,27 +62,11 @@ ${dropoff2_location}        css=input[placeholder="Dropoff2 Location"]
 ${dropoff3_location}        css=input[placeholder="Dropoff3 Location"]
 ${dropoff4_location}        css=input[placeholder="Dropoff4 Location"]
 ${dropoff5_location}        css=input[placeholder="Dropoff5 Location"]
-${dropoff1_address}         Q. House Lumpini
-${dropoff2_address}         AIA
-${dropoff3_address}         Interchange Tower
-${dropoff4_address}         FYI Center
-${dropoff5_address}         CP Tower
 ${contact_person1}          css=.dropoffContainer input[placeholder="Contact Person / Company"]
-${contact_name1}            สมชาย  ขายดี
 ${phone_number1}            css=.dropoffContainer input[placeholder="Phone number"]
-${contact_phone1}           0925554545
 ${dropoff_comment1}         css=#textinputDropoffComment
-${contact_comment1}         Level 12
 ${contact_person_element}   $('.dropoffContainer input[placeholder="Contact Person / Company"]')
 ${phone_number_element}     $('.dropoffContainer input[placeholder="Phone number"]')
-${contact_name2}            สมใจ  ขายดี
-${contact_phone2}           0926667676
-${contact_name3}            สุขใจ  ขายดี
-${contact_phone3}           0928989988
-${contact_name4}            อยู่สบาย  ขายดี
-${contact_phone4}           0981239898
-${contact_name5}            สมชาย  ขายดี
-${contact_phone5}           0988689958
 ${confirmation_modal}       css=#content3
 ${add_more_dropoff}         css=li#addNewDropoff
 ${delete_dropoff}           $('.del-dropoff-parcel a.ng-binding')[0]

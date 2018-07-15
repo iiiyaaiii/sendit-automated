@@ -4,6 +4,7 @@ Suite Teardown		Close All Browsers
 Library				Selenium2Library
 Library				DateTime
 Resource			globalElement.robot
+Resource      Input_data
 Resource			keyword_Login.robot
 Resource			keyword_Settings.robot
 Resource			keyword_Pickup.robot

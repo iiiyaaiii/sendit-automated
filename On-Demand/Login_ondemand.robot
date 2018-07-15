@@ -3,6 +3,7 @@ Suite Setup
 Suite Teardown		Close All Browsers
 Library				Selenium2Library
 Resource			globalElement.robot
+Resource      Input_data.robot
 Resource			keyword_Login.robot
 Resource			keyword_Settings.robot
 
