@@ -37,9 +37,20 @@ Select pay by Cash successful
   Sleep  10s
   Element Should Be Visible        ${confirmation_modal}
   Check send date time      2       05
-  Element Text Should Be        ${dropoff_element}     1 DROPOFF
-  Check parcels summary detail    1     1     ID
-  Check parcels summary detail    1     2     DOCUMENT
-  Check parcels summary detail    1     3     INSURANCE
-  Click Button                Confirm >
-  Element Should Be Visible     ${payment_modal}
+  Click Button                      Confirm >
+  Element Should Be Visible         ${payment_modal}
+  Sleep  5s
+  Click Element                     css=label[for="cash"]
+  Sleep  3s
+  Click Button                      SEND IT
+  Sleep  10s
+  Element Should Be Visible         css=div.sendit-modal
+  ${sendit_header} =                Get Text     css=div.sendit-modal .header
+  Should Be Equal                   ${sendit_header}           Thank you for your order
+  # ${dropoff_addr} =           Get Text          css=div.parcelDropoff
+  # Should Contain                    ${dropoff_addr}      ${dropoff1_address}
+  ${recipient_name} =           Get Text          css=div.parcelDropoff i.fa-user
+  Should Contain                    ${recipient_name}       ${contact_name1}
+  ${recipient_phone} =           Get Text          css=div.parcelDropoff i.fa-phone
+  Should Contain                    ${recipient_phone}      ${contact_phone1}
+  Click Button                      DONE
