@@ -110,9 +110,13 @@ ${bookmark_star_pickup}     $('.bookmark.glyphicon-star-empty')[0]
 ${bookmark_star_dropoff}    $('.bookmark.glyphicon-star-empty')[1]
 ${summary_pickup_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/h4/div
 ${summary_dropoff_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/div/h4/div
+${confirm_summary_btn}       Confirm >
 
 #Payment
 ${payment_modal}            css=div.payment
+${cash_payment_btn}         css=label[for="cash"]
+${card_payment_btn}         css=label[for="card"]
 ${sendit_modal}             css=div.sendit-modal
 ${sendit_header}            css=div.sendit-modal .header
+${sendit_btn}               SEND IT
 ${sendit_recipient_detail}       css=div.parcelDropoff

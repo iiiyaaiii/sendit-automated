@@ -50,4 +50,5 @@ ${contact_phone5}           0988689958
 #Payment
 ${sendit_payment_success_header}        Thank you for your order
 
+#Active Deliveries
 ${url_ondemand_activedelivery}			    https://staging-customer.sendit.asia/#!/active-deliveries

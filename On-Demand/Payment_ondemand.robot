@@ -37,20 +37,7 @@ Select pay by Cash successful
   Sleep  10s
   Element Should Be Visible        ${confirmation_modal}
   Check send date time      2       05
-  Click Button                      Confirm >
-  Element Should Be Visible         ${payment_modal}
-  Sleep  5s
-  Click Element                     css=label[for="cash"]
-  Sleep  3s
-  Click Button                      SEND IT
+  Click Button                      ${confirm_summary_btn}
+  Select payment by                 CASH
   Sleep  10s
-  Element Should Be Visible         ${sendit_modal}
-  ${header} =                Get Text     ${sendit_header}
-  Should Be Equal                   ${header}           ${sendit_payment_success_header}
-  ${recipient_detail} =             Get Text            ${sendit_recipient_detail}
-  Should Contain                    ${recipient_detail}       ${contact_name1}
-  Should Contain                    ${recipient_detail}      ${contact_phone1}
-  Click Element                     ${done_btn}
-  Sleep  5s
-  ${current_url} =                  Get Location
-  Should Be Equal                   ${current_url}    ${url_ondemand_activedelivery}#referToTopPoint
+  Check payment success
