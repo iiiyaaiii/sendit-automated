@@ -3,8 +3,8 @@
 Select payment by     [Arguments]       ${type}
   Element Should Be Visible         ${payment_modal}
   Sleep  5s
-  Run Keyword If              ${type} == CASH             Click Element       ${cash_payment_btn}
-  ...         ELSE IF         ${type} == CREDIT CARD      Click Element       ${card_payment_btn}
+  Run Keyword If              '${type}' == 'CASH'             Click Element       ${cash_payment_btn}
+  ...         ELSE IF         '${type}' == 'CREDIT CARD'      Click Element       ${card_payment_btn}
   Sleep  3s
   Click Button                      ${sendit_btn}
 

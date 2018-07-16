@@ -120,3 +120,7 @@ ${sendit_modal}             css=div.sendit-modal
 ${sendit_header}            css=div.sendit-modal .header
 ${sendit_btn}               SEND IT
 ${sendit_recipient_detail}       css=div.parcelDropoff
+
+#Tracking
+${tracking_link_menu}     css=a[href="#!/tracking/active"]
+${search_tracking}        css=input#searchText
