@@ -113,3 +113,6 @@ ${summary_dropoff_addr}      //*[@id="content3"]/div/div[1]/ul/li/div[1]/div[2]/
 
 #Payment
 ${payment_modal}            css=div.payment
+${sendit_modal}             css=div.sendit-modal
+${sendit_header}            css=div.sendit-modal .header
+${sendit_recipient_detail}       css=div.parcelDropoff

@@ -46,3 +46,8 @@ ${contact_phone4}           0981239898
 ${dropoff5_address}         CP Tower
 ${contact_name5}            พรชัย  ขายดี
 ${contact_phone5}           0988689958
+
+#Payment
+${sendit_payment_success_header}        Thank you for your order
+
+${url_ondemand_activedelivery}			    https://staging-customer.sendit.asia/#!/active-deliveries

@@ -44,13 +44,13 @@ Select pay by Cash successful
   Sleep  3s
   Click Button                      SEND IT
   Sleep  10s
-  Element Should Be Visible         css=div.sendit-modal
-  ${sendit_header} =                Get Text     css=div.sendit-modal .header
-  Should Be Equal                   ${sendit_header}           Thank you for your order
-  # ${dropoff_addr} =           Get Text          css=div.parcelDropoff
-  # Should Contain                    ${dropoff_addr}      ${dropoff1_address}
-  ${recipient_name} =           Get Text          css=div.parcelDropoff i.fa-user
-  Should Contain                    ${recipient_name}       ${contact_name1}
-  ${recipient_phone} =           Get Text          css=div.parcelDropoff i.fa-phone
-  Should Contain                    ${recipient_phone}      ${contact_phone1}
-  Click Button                      DONE
+  Element Should Be Visible         ${sendit_modal}
+  ${header} =                Get Text     ${sendit_header}
+  Should Be Equal                   ${header}           ${sendit_payment_success_header}
+  ${recipient_detail} =             Get Text            ${sendit_recipient_detail}
+  Should Contain                    ${recipient_detail}       ${contact_name1}
+  Should Contain                    ${recipient_detail}      ${contact_phone1}
+  Click Element                     ${done_btn}
+  Sleep  5s
+  ${current_url} =                  Get Location
+  Should Be Equal                   ${current_url}    ${url_ondemand_activedelivery}#referToTopPoint
