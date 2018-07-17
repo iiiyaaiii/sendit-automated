@@ -1,21 +1,27 @@
 *** Keywords ***
 
-Check search results display correctly     [Arguments]     ${input}
+Check search results display correctly     [Arguments]     ${element}       ${input}
   ${i} =  Set Variable		${1}
-  ${results} =      Get Element Count    css=.order-list
-
+  ${results} =      Get Element Count    ${results_list}
+  ${j} =  Set Variable		${0}
   :FOR  ${index}  IN RANGE  ${results}
-	\  Click Element            //*[@id="list-view"]/div/ul/li[${i}]/a
-  \  Sleep  2s
-  # \  Execute Javascript    	$('${pickup_google_item}').click()
-  # \  Sleep  2s
-  # \  Execute Javascript               $(${contact_person_element}[${i-1}]).click()
-  # \  Execute Javascript               $(${contact_person_element}[${i-1}]).val("${contact_name${i}}")
-  # \  Execute Javascript               $(${phone_number_element}[${i-1}]).val("${contact_phone${i}}")
-  # \  Run Keyword If 				'${parcel1}' != 'False' 		  Select parcel          ${parcel1}
-  # \  Run Keyword If 				'${parcel1}' == 'False' 		  Exit For Loop
-  # \  Run Keyword If 				'${parcel2}' != 'False' 		  Select parcel          ${parcel2}
-  # \  Run Keyword If 				'${parcel2}' == 'False' 		  Exit For Loop
+	\  Click Element          ${result_item}[${i}]/a
+  \  Sleep  10s
+  \  ${recipient_element} =      Get Element Count    ${element}
+  \  Loop to check recipient detail     ${recipient_element}      ${input}
 	\  ${i} =  Set Variable		${i+1}
 	\  Run Keyword If 				${i} > ${results} 			Exit For Loop
-  # \  Click Element                   ${add_more_dropoff}
+
+
+Loop to check recipient detail      [Arguments]     ${recipient_element}      ${input}
+  ${j} =  Set Variable		${0}
+  :FOR  ${index}  IN RANGE  ${recipient_element}
+  \  ${recipient_name} =   Execute Javascript    	return $($('${dropoff_recipient_name}')[${j}]).text()
+  \  Should Contain        ${recipient_name}       ${input}
+  \  ${j} =  Set Variable		${j+1}
+  \  Run Keyword If 				${j} >= ${recipient_element} 			Exit For Loop
+
+Check no results found
+  Element Should Be Visible    ${noorder_element}
+  Element Text Should Be      ${noorder_element}        ${no_order_message}
+  Element Text Should Be      ${all_loaded_element}     ${all_loaded_message}

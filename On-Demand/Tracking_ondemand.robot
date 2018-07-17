@@ -15,15 +15,15 @@ Resource      keyword_Payment.robot
 Resource      keyword_Tracking.robot
 
 *** Test Cases ***
-Search tracking by ID
-  Open Ondemand website
-  Login to Ondemand			   ${username}				${password}
-  Sleep  3s
-  Click Link               ${tracking_link_menu}
-  Sleep  3s
-  ${orderid} =            Get Text        //*[@id="list-view"]/div/ul/li[1]/div[1]/small[1]/b
-  Log To Console          ${orderid}
-  Input Text              ${search_tracking}      ${orderid}
+# Search tracking by ID
+#   Open Ondemand website
+#   Login to Ondemand			   ${username}				${password}
+#   Sleep  3s
+#   Click Link               ${tracking_link_menu}
+#   Sleep  5s
+#   ${orderid} =            Get Text        ${result_id1}
+#   Log To Console          ${orderid}
+#   Input Text              ${search_tracking}      ${orderid}
 
 Search tracking by Name
   Open Ondemand website
@@ -32,4 +32,15 @@ Search tracking by Name
   Click Link               ${tracking_link_menu}
   Sleep  3s
   Input Text               ${search_tracking}      ${contact_name1}
-  Check search results display correctly           ${contact_name1}
+  Sleep  10s
+  Check search results display correctly           css=${dropoff_recipient_name}        ${contact_name1}
+
+Search tracking not found
+  Open Ondemand website
+  Login to Ondemand			   ${username}				${password}
+  Sleep  3s
+  Click Link               ${tracking_link_menu}
+  Sleep  3s
+  Input Text               ${search_tracking}      ${search_input_no_result}
+  Sleep  10s
+  Check no results found

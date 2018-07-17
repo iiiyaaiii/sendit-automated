@@ -124,3 +124,10 @@ ${sendit_recipient_detail}       css=div.parcelDropoff
 #Tracking
 ${tracking_link_menu}     css=a[href="#!/tracking/active"]
 ${search_tracking}        css=input#searchText
+${results_list}           css=.order-list
+${result_id1}             //*[@id="list-view"]/div/ul/li[1]/div[1]/small[1]/b
+${result_item}            //*[@id="list-view"]/div/ul/li
+${dropoff_recipient_name}     .dropOffList .recipient-name
+${noorder_element}        css=div.noOrder
+${all_loaded_element}     css=div.text-center
+# ${load_more_order_btn}    css=button.btn-loadmoreorder

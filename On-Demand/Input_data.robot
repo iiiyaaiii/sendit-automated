@@ -50,5 +50,10 @@ ${contact_phone5}           0988689958
 #Payment
 ${sendit_payment_success_header}        Thank you for your order
 
+#Tracking
+${search_input_no_result}   !@#$% ___No results
+${no_order_message}         No order found
+${all_loaded_message}       All order loaded
+
 #Active Deliveries
 ${url_ondemand_activedelivery}			    https://staging-customer.sendit.asia/#!/active-deliveries
