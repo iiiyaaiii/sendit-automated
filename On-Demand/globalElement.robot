@@ -141,3 +141,7 @@ ${active_deliveries_header}       css=h3.title
 ${active_deliveries_table}        //*[@id="activeDeliveriesTable"][1]
 ${order_item}                     //*[@id="activeDeliveriesTable"]/tbody
 ${plus_icon}                      /tr[2]/td[1]
+${history_plus_icon}              /tr[1]/td[1]
+
+#History
+${history_link_menu}     css=a[href="#!/history"]
