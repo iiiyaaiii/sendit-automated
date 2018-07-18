@@ -16,3 +16,13 @@ Check history item display headers text correctly
   Table Row Should Contain            ${active_deliveries_table}      4     ${dropoff_duration_txt}
   Table Row Should Contain            ${active_deliveries_table}      4     ${dropoff_eta_txt}
   Table Row Should Contain            ${active_deliveries_table}      4     ${dropoff_status_txt}
+
+Check history item display status completed correctly
+  Table Cell Should Contain           ${active_deliveries_table}      2    8     Completed
+  Table Cell Should Contain           ${active_deliveries_table}      6    8     Completed
+
+Check can click map icon
+  Click Element                       ${map_icon_1}
+  Sleep  2s
+  Element Should Be Visible           ${driver_location_modal}
+  Click Button                        DONE

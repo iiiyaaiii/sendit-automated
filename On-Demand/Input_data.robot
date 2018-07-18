@@ -77,3 +77,6 @@ ${distance_txt}                         Distance
 ${dropoff_duration_txt}                 Waiting Duration
 ${dropoff_eta_txt}                      ETA
 ${dropoff_status_txt}                   Status
+
+#Export
+${export_txt}           CSV Export

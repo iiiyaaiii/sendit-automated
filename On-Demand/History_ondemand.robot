@@ -9,7 +9,6 @@ Resource			keyword_Login.robot
 Resource      keyword_History.robot
 Resource      keyword_Active_Deliveries.robot
 
-
 *** Test Cases ***
 Display History
   Open Ondemand website
@@ -26,3 +25,5 @@ Display History
   Check table headers contain text correctly         ${header_status_txt}
   Click plus icon of history item       1
   Check history item display headers text correctly
+  Check history item display status completed correctly
+  Check can click map icon

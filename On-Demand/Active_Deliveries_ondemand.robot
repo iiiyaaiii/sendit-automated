@@ -15,7 +15,7 @@ Display Active Deliveries
   Sleep  3s
   Click Link               ${active_delveries_link_menu}
   Sleep  5s
-  Element Text Should Be   ${active_deliveries_header}        ${active_deliveries_txt}
+  Element Text Should Be        ${header_element}         ${active_deliveries_txt}
   Check table headers contain text correctly         ${header_orderno_txt}
   Check table headers contain text correctly         ${header_createtime_txt}
   Check table headers contain text correctly        ${header_pickuptime_txt}

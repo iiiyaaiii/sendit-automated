@@ -137,7 +137,7 @@ ${cut_prefix_order}       Order #
 
 #Active Deliveries
 ${active_delveries_link_menu}     css=a[href="#!/active-deliveries"]
-${active_deliveries_header}       css=h3.title
+${header_element}                 css=h3.title
 ${active_deliveries_table}        //*[@id="activeDeliveriesTable"][1]
 ${order_item}                     //*[@id="activeDeliveriesTable"]/tbody
 ${plus_icon}                      /tr[2]/td[1]
@@ -145,3 +145,9 @@ ${history_plus_icon}              /tr[1]/td[1]
 
 #History
 ${history_link_menu}     css=a[href="#!/history"]
+${map_icon_1}            //*[@id="activeDeliveriesTable"]/tbody[1]/tr[3]/td[2]/i
+${driver_location_modal}          css=div.driverModal
+
+#Export
+${date_selection}        dateSelection
+${export_link_menu}      css=a[href="#!/export"]
