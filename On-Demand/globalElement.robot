@@ -125,9 +125,19 @@ ${sendit_recipient_detail}       css=div.parcelDropoff
 ${tracking_link_menu}     css=a[href="#!/tracking/active"]
 ${search_tracking}        css=input#searchText
 ${results_list}           css=.order-list
-${result_id1}             //*[@id="list-view"]/div/ul/li[1]/div[1]/small[1]/b
+${result_id}              /div[1]/small[1]/b
 ${result_item}            //*[@id="list-view"]/div/ul/li
 ${dropoff_recipient_name}     .dropOffList .recipient-name
 ${noorder_element}        css=div.noOrder
 ${all_loaded_element}     css=div.text-center
+${sort_icon}              css=i[title="Sort"]
+${sort_by_orderID}        //*[@id="list-view"]/form/div/div/div/ul/li[1]/a
+${cut_prefix_order}       Order #
 # ${load_more_order_btn}    css=button.btn-loadmoreorder
+
+#Active Deliveries
+${active_delveries_link_menu}     css=a[href="#!/active-deliveries"]
+${active_deliveries_header}       css=h3.title
+${active_deliveries_table}        //*[@id="activeDeliveriesTable"][1]
+${order_item}                     //*[@id="activeDeliveriesTable"]/tbody
+${plus_icon}                      /tr[2]/td[1]

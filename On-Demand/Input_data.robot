@@ -57,3 +57,23 @@ ${all_loaded_message}       All order loaded
 
 #Active Deliveries
 ${url_ondemand_activedelivery}			    https://staging-customer.sendit.asia/#!/active-deliveries
+${active_deliveries_txt}                Active Deliveries
+${header_orderno_txt}                   Order No.
+${header_createtime_txt}                Created Time
+${header_pickuptime_txt}                Pickup Time
+${header_distance_txt}                  Distance
+${header_price_txt}                     Price
+${header_eta_txt}                       ETA
+${header_status_txt}                    Status
+${assignment_txt}                       Assignment ID
+${pickup_txt}                           Pickup Location
+${driver_txt}                           Driver Name
+${driver_phone_txt}                     Phone Number
+${pickup_duration_txt}                  Waiting Duration
+${jobno_txt}                            Job No.
+${dropoff_txt}                          Dropoff
+${parcel_txt}                           Parcel
+${distance_txt}                         Distance
+${dropoff_duration_txt}                 Waiting Duration
+${dropoff_eta_txt}                      ETA
+${dropoff_status_txt}                   Status
