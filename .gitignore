@@ -8,3 +8,15 @@ On-Demand/output\.xml
 On-Demand/report\.html
 
 *.png
+
+2stage_0\.01/
+
+Robot Android/test_Youtube\.robot
+
+Robot Android/log\.html
+
+Robot Android/output\.xml
+
+Robot Android/report\.html
+
+Robot Android/test_calculator\.robot
