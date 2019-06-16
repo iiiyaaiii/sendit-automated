@@ -8,3 +8,11 @@ On-Demand/output\.xml
 On-Demand/report\.html
 
 *.png
+
+*.log
+
+2stage_0\.01/log\.html
+
+*.xml
+
+*.html
